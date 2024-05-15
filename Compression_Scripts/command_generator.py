@@ -1,5 +1,9 @@
 import os
 import json
+
+import sys
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from Analysis_Scripts.size_checker import get_file_size
 from path_generator import PathGenerator
 from compressor_paths import COMPRESSOR_PATHS

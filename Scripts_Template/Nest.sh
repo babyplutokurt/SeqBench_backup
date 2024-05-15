@@ -3,7 +3,6 @@
 #PBS -N {{ job_name }}
 #PBS -q normal
 #PBS -l {{ nodes }}
-#PBS -l mem={{ memory }}
 #PBS -M {{ email }}
 #PBS -o {{ output_log }}
 #PBS -e {{ error_log }}

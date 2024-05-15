@@ -1,33 +1,34 @@
 ----------------------------------------
-Begin Batch Job Prologue Tue May 14 22:47:00 EDT 2024
-Job ID:           71422
+Begin Batch Job Prologue Wed May 15 11:14:48 EDT 2024
+Job ID:           1880360
 Username:         tus53997
 Group:            cis
 Job Name:         job_0_0_0
-Resources List:   walltime=168:00:00,nodes=1:ppn=6,mem=128gb,neednodes=1:ppn=6
-Queue:            compute
+Resources List:   walltime=24:00:00,nodes=1:ppn=28,neednodes=1:ppn=28
+Queue:            normal
 Account:          
-Nodes:            c07 
+Nodes:            b171 
 ----------------------------------------
-End Batch Job Prologue Tue May 14 22:47:00 EDT 2024
+End Batch Job Prologue Wed May 15 11:14:48 EDT 2024
 ----------------------------------------
 compression ratio = 55.98 
-compression time = 2.551453
+compression time = 2.400143
 compressed data file = /home/tus53997/SeqBench/CompressedOutput/HG00097_CCAAGTCT-AAGGATGA_HCLHLDSXX_L004_001.R1_1000000.bin_-f_-1_37500000_-M_REL_0.1.sz
 compression ratio = 55.977126
-decompression time = 0.433310 seconds.
+decompression time = 0.391913 seconds.
 decompressed file = /home/tus53997/SeqBench/DecompressedOutput/HG00097_CCAAGTCT-AAGGATGA_HCLHLDSXX_L004_001.R1_1000000.bin_-f_-1_37500000_-M_REL_0.1.sz.fastq
 ----------------------------------------
-Begin Batch Job Epilogue Tue May 14 22:47:05 EDT 2024
-Job ID:           71422
+Begin Batch Job Epilogue Wed May 15 11:14:55 EDT 2024
+Job ID:           1880360
 Username:         tus53997
 Group:            cis
 Job Name:         job_0_0_0
-Session:          92077
-Limits:           walltime=168:00:00,nodes=1:ppn=6,mem=128gb,neednodes=1:ppn=6
-Resources:        cput=00:00:03,vmem=0kb,walltime=00:00:05,mem=0kb,energy_used=0
-Queue:            compute
+Session:          9647
+Limits:           walltime=24:00:00,nodes=1:ppn=28,neednodes=1:ppn=28
+Resources:        cput=00:00:03,vmem=0kb,walltime=00:00:07,mem=0kb,energy_used=0
+Queue:            normal
 Account:          
+Deleting /dev/shm/*...
 ----------------------------------------
-End Batch Job Epilogue Tue May 14 22:47:15 EDT 2024
+End Batch Job Epilogue Wed May 15 11:15:16 EDT 2024
 ----------------------------------------

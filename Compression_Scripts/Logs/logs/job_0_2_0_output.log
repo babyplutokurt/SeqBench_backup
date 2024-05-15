@@ -1,15 +1,15 @@
 ----------------------------------------
-Begin Batch Job Prologue Tue May 14 22:47:21 EDT 2024
-Job ID:           71426
+Begin Batch Job Prologue Wed May 15 11:14:52 EDT 2024
+Job ID:           1880364
 Username:         tus53997
 Group:            cis
 Job Name:         job_0_2_0
-Resources List:   walltime=168:00:00,nodes=1:ppn=6,mem=128gb,neednodes=1:ppn=6
-Queue:            compute
+Resources List:   walltime=24:00:00,nodes=1:ppn=28,neednodes=1:ppn=28
+Queue:            normal
 Account:          
-Nodes:            c07 
+Nodes:            b085 
 ----------------------------------------
-End Batch Job Prologue Tue May 14 22:47:22 EDT 2024
+End Batch Job Prologue Wed May 15 11:14:53 EDT 2024
 ----------------------------------------
 Temporary directory: ./tmp.fa37JncCHr/
 Long flag detected.
@@ -18,17 +18,17 @@ Preprocessing ...
 Max Read length: 150
 Total number of reads: 250000
 Preprocessing done!
-Time for this step: 179 s
-Temporary directory size: 11167721
+Time for this step: 148 s
+Temporary directory size: 11167861
 
 Sizes of streams after compression: 
 Reads:           8736724 bytes
-Quality:         1915338 bytes
+Quality:         1915478 bytes
 ID:               515659 bytes
 Creating tar archive ...Tar archive done!
 Time for this step: 0 s
 Compression done!
-Total time for compression: 179 s
+Total time for compression: 149 s
 
 Total size:     11253760 bytes
 Temporary directory: ./tmp.fa37JncCHr/
@@ -39,16 +39,17 @@ Decompressing ...
 Decompression done!
 Total time for decompression: 1 s
 ----------------------------------------
-Begin Batch Job Epilogue Tue May 14 22:50:24 EDT 2024
-Job ID:           71426
+Begin Batch Job Epilogue Wed May 15 11:17:26 EDT 2024
+Job ID:           1880364
 Username:         tus53997
 Group:            cis
 Job Name:         job_0_2_0
-Session:          92203
-Limits:           walltime=168:00:00,nodes=1:ppn=6,mem=128gb,neednodes=1:ppn=6
-Resources:        cput=00:17:40,vmem=1148988kb,walltime=00:03:03,mem=976480kb,energy_used=0
-Queue:            compute
+Session:          28935
+Limits:           walltime=24:00:00,nodes=1:ppn=28,neednodes=1:ppn=28
+Resources:        cput=00:15:39,vmem=1116688kb,walltime=00:02:34,mem=828552kb,energy_used=0
+Queue:            normal
 Account:          
+Deleting /dev/shm/*...
 ----------------------------------------
-End Batch Job Epilogue Tue May 14 22:50:34 EDT 2024
+End Batch Job Epilogue Wed May 15 11:17:47 EDT 2024
 ----------------------------------------

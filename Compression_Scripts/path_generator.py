@@ -1,5 +1,8 @@
 import os
 import json
+import sys
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from Analysis_Scripts.size_checker import get_file_size  # Ensure this path is correct based on your project structure
 
 

@@ -8,7 +8,7 @@ from dependency_linker import DependencyLinker
 
 
 class JobGenerator:
-    def __init__(self, config_name, template_path="/home/tus53997/SeqBench/Scripts_Template/Compute.sh",
+    def __init__(self, config_name, template_path="/home/tus53997/SeqBench/Scripts_Template/Nest.sh",
                  dependency_file="/home/tus53997/SeqBench/Compression_Scripts/Logs/job_dependencies.json"):
         self.factory = CommandGeneratorFactory(config_name)
         self.config = self.factory.config
@@ -45,10 +45,9 @@ class JobGenerator:
         dependency_line = f"#PBS -W depend=afterok:{dependency}\n" if dependency else ""
 
         job_script_content = template.render(
-            walltime="168:00:00",
+            walltime="24:00:00",
             job_name=job_name,
-            nodes="1:ppn=6",
-            memory="128gb",
+            nodes="nodes=1:ppn=28",
             email="taolue.yang@temple.edu",
             output_log=output_log,
             error_log=error_log,

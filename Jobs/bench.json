@@ -8,7 +8,7 @@
       "./FASTQ/HG00097_CCAAGTCT-AAGGATGA_HCLHLDSXX_L004_001.R2_1000000.fastq"
     ],
     [
-      "/home/tus53997/SeqBench/FASTQ/HG00097_copy.fastq"
+      "/home/tus53997/SeqBench/FASTQ/HG00097_CCAAGTCT-AAGGATGA_HCLHLDSXX_L004_001.R2_1000000_copy.fastq"
     ]
   ],
   "input_file_binary": [
@@ -17,7 +17,7 @@
       "./binFile/HG00097_CCAAGTCT-AAGGATGA_HCLHLDSXX_L004_001.R2_1000000.bin"
     ],
     [
-      "/home/tus53997/SeqBench/binFile/HG00097_CCAAGTCT-AAGGATGA_HCLHLDSXX_L004_001.R1_1000000.bin"
+      "/home/tus53997/SeqBench/binFile/HG00097_CCAAGTCT-AAGGATGA_HCLHLDSXX_L004_001.R2_1000000_copy.bin"
     ]
   ],
   "reference_file": "/home/tus53997/Fastq/hg38.fa",
