@@ -1,6 +1,7 @@
 #!/bin/sh
 #PBS -l walltime={{ walltime }}
 #PBS -N {{ job_name }}
+#PBS -q normal
 #PBS -l {{ nodes }}
 #PBS -l mem={{ memory }}
 #PBS -M {{ email }}
