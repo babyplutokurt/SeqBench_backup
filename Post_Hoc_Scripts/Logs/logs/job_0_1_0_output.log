@@ -1,0 +1,30 @@
+----------------------------------------
+Begin Batch Job Prologue Sun May 19 10:55:25 EDT 2024
+Job ID:           72020
+Username:         tus53997
+Group:            cis
+Job Name:         job_0_1_0
+Resources List:   walltime=24:00:00,nodes=1:ppn=24,neednodes=1:ppn=24
+Queue:            compute
+Account:          
+Nodes:            c04 
+----------------------------------------
+End Batch Job Prologue Sun May 19 10:55:25 EDT 2024
+----------------------------------------
+Precision: .999187
+Recall: .994411
+F1 Score: .996792
+----------------------------------------
+Begin Batch Job Epilogue Sun May 19 13:20:30 EDT 2024
+Job ID:           72020
+Username:         tus53997
+Group:            cis
+Job Name:         job_0_1_0
+Session:          164966
+Limits:           walltime=24:00:00,nodes=1:ppn=24,neednodes=1:ppn=24
+Resources:        cput=13:32:23,vmem=10067704kb,walltime=02:25:06,mem=9014072kb,energy_used=0
+Queue:            compute
+Account:          
+----------------------------------------
+End Batch Job Epilogue Sun May 19 13:20:40 EDT 2024
+----------------------------------------

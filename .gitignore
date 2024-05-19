@@ -3,3 +3,9 @@ binFile
 CompressedOutput
 DecompressedOutput
 External_Dependencies
+SAM
+BAM
+VCF
+RefSeq
+
+

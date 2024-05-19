@@ -2,7 +2,7 @@
 #PBS -l walltime={{ walltime }}
 #PBS -N {{ job_name }}
 #PBS -q normal
-#PBS -l {{ nodes }}
+#PBS -l nodes={{ nodes }}:ppn={{ ppn }}
 #PBS -M {{ email }}
 #PBS -o {{ output_log }}
 #PBS -e {{ error_log }}
@@ -10,7 +10,7 @@
 # change to directory where 'qsub' was called
 cd $PBS_O_WORKDIR
 
-source /home/tus53997/miniconda3/bin/activate compression
+source {{ conda_path }} compression
 
 # Run compression and capture metrics
 START_TIME=$SECONDS
@@ -20,7 +20,9 @@ COMPRESSION_DURATION=$((END_TIME - START_TIME))
 
 INPUT_SIZE=$(stat -c %s "{{ input_path }}")
 OUTPUT_SIZE=$(stat -c %s "{{ compressed_output_path }}")
-RATIO=$(echo "scale=2; $INPUT_SIZE / $OUTPUT_SIZE" | bc)
+RATIO=$(echo "scale=6; $INPUT_SIZE / $OUTPUT_SIZE" | bc)
+
+sleep 10
 
 # Run decompression and capture metrics
 START_TIME=$SECONDS

@@ -24,9 +24,12 @@ class PathGenerator:
     def get_full_path(self, relative_path):
         if os.path.isabs(relative_path):
             return os.path.normpath(relative_path)
-        # Normalize and resolve path to absolute
         full_path = os.path.abspath(os.path.join(self.project_base_dir, relative_path))
         return full_path
+
+    def get_reference_file_path(self):
+        reference_file = self.config['reference_file']
+        return self.get_full_path(reference_file)
 
     def get_input_file_path(self, job_index, file_pair_index, file_index):
         job_name = self.config['jobs'][job_index]['name'].upper()
@@ -103,14 +106,146 @@ class PathGenerator:
         formatted_options = options.replace(" ", "_")
         return f"{compressor_name}_{formatted_options}"
 
+    def get_truth_sam_path(self, job_index, file_pair_index, file_index):
+        input_file_path = self.get_input_file_path(job_index, file_pair_index, file_index)
+        sam_filename = f"{os.path.basename(input_file_path)}.sam"
+        sam_path = os.path.abspath(os.path.join(self.project_base_dir, 'SAM', sam_filename))
+        return sam_path
+
+    def get_truth_sorted_bam_path(self, job_index, file_pair_index, file_index):
+        sam_path = self.get_truth_sam_path(job_index, file_pair_index, file_index)
+        bam_filename = f"{os.path.basename(sam_path).replace('.sam', '')}_sorted.bam"
+        bam_path = os.path.abspath(os.path.join(self.project_base_dir, 'BAM', bam_filename))
+        return bam_path
+
+    def get_truth_variant_path(self, job_index, file_pair_index, file_index):
+        bam_path = self.get_truth_sorted_bam_path(job_index, file_pair_index, file_index)
+        vcf_filename = f"{os.path.basename(bam_path).replace('_sorted.bam', '')}.vcf"
+        vcf_path = os.path.abspath(os.path.join(self.project_base_dir, 'VCF', vcf_filename))
+        return vcf_path
+
+    def get_truth_compressed_variant_path(self, job_index, file_pair_index, file_index):
+        vcf_path = self.get_truth_variant_path(job_index, file_pair_index, file_index)
+        compressed_variant_path = vcf_path + '.gz'
+        return compressed_variant_path
+
+    def get_sam_path(self, job_index, file_pair_index, file_index):
+        input_file_path = self.get_input_file_path(job_index, file_pair_index, file_index)
+        job_options = self.config['jobs'][job_index]['options'][0]
+        sanitized_options = job_options.replace(" ", "_").replace("/", "_")
+        sam_filename = f"{os.path.basename(input_file_path)}_{sanitized_options}.sam"
+        sam_path = os.path.abspath(os.path.join(self.project_base_dir, 'SAM', sam_filename))
+        return sam_path
+
+    def get_sorted_bam_path(self, job_index, file_pair_index, file_index):
+        sam_path = self.get_sam_path(job_index, file_pair_index, file_index)
+        bam_filename = f"{os.path.basename(sam_path).replace('.sam', '')}_sorted.bam"
+        bam_path = os.path.abspath(os.path.join(self.project_base_dir, 'BAM', bam_filename))
+        return bam_path
+
+    def get_variant_path(self, job_index, file_pair_index, file_index):
+        bam_path = self.get_sorted_bam_path(job_index, file_pair_index, file_index)
+        vcf_filename = f"{os.path.basename(bam_path).replace('_sorted.bam', '')}.vcf"
+        vcf_path = os.path.abspath(os.path.join(self.project_base_dir, 'VCF', vcf_filename))
+        return vcf_path
+
+    def get_compressed_variant_path(self, job_index, file_pair_index, file_index):
+        vcf_path = self.get_variant_path(job_index, file_pair_index, file_index)
+        compressed_variant_path = vcf_path + '.gz'
+        return compressed_variant_path
+
+    def get_truth_vcf_script_path(self, job_index, file_pair_index, file_index):
+        scripts_dir = os.path.join(self.project_base_dir, 'Post_Hoc_Scripts/Logs/JobScripts')
+        os.makedirs(scripts_dir, exist_ok=True)
+        return os.path.join(scripts_dir, f"truth_vcf.sh")
+
+    def get_lossy_vcf_script_path(self, job_index, file_pair_index, file_index):
+        scripts_dir = os.path.join(self.project_base_dir, 'Post_Hoc_Scripts/Logs/JobScripts')
+        os.makedirs(scripts_dir, exist_ok=True)
+        return os.path.join(scripts_dir, f"post_hoc_{file_pair_index}_{job_index}_{file_index}.sh")
+
+    def get_vcf_script_path(self, job_index, file_pair_index, file_index):
+        scripts_dir = os.path.join(self.project_base_dir, 'Post_Hoc_Scripts/Logs/JobScripts')
+        os.makedirs(scripts_dir, exist_ok=True)
+        return os.path.join(scripts_dir, f"truth_vcf_{file_pair_index}_{job_index}.sh")
+
+    def get_comparison_dir_path(self, job_index, file_pair_index, file_index):
+        comparison_dir = os.path.join(self.project_base_dir, 'VCF', 'comparison',
+                                      f"{file_pair_index}_{job_index}_{file_index}")
+        os.makedirs(comparison_dir, exist_ok=True)
+        return comparison_dir
+
+    def get_post_hoc_metric_path(self, file_pair_index, file_index):
+        input_files = self.config['input_file'][file_pair_index]
+        input_file_path = self.get_full_path(input_files[0])
+        base_filename = os.path.basename(input_file_path)
+        metrics_filename = f"compression_metrics_{base_filename}.csv"
+        metrics_dir = os.path.abspath(os.path.join(self.project_base_dir, 'Post_Hoc_Scripts', 'Logs', 'metrics'))
+        os.makedirs(metrics_dir, exist_ok=True)
+        return os.path.join(metrics_dir, metrics_filename)
+
+    def get_post_hoc_output_log_path(self, job_index, file_pair_index, file_index):
+        logs_dir = os.path.join(self.project_base_dir, 'Post_Hoc_Scripts/Logs/logs')
+        os.makedirs(logs_dir, exist_ok=True)
+        return os.path.join(logs_dir, f"job_{file_pair_index}_{job_index}_{file_index}_output.log")
+
+    def get_post_hoc_error_log_path(self, job_index, file_pair_index, file_index):
+        logs_dir = os.path.join(self.project_base_dir, 'Post_Hoc_Scripts/Logs/logs')
+        os.makedirs(logs_dir, exist_ok=True)
+        return os.path.join(logs_dir, f"job_{file_pair_index}_{job_index}_{file_index}_error.log")
+
+    def get_post_hoc_truth_output_log_path(self, job_index, file_pair_index, file_index):
+        logs_dir = os.path.join(self.project_base_dir, 'Post_Hoc_Scripts/Logs/logs')
+        os.makedirs(logs_dir, exist_ok=True)
+        return os.path.join(logs_dir, f"truth_vcf_{file_pair_index}_output.log")
+
+    def get_post_hoc_truth_error_log_path(self, job_index, file_pair_index, file_index):
+        logs_dir = os.path.join(self.project_base_dir, 'Post_Hoc_Scripts/Logs/logs')
+        os.makedirs(logs_dir, exist_ok=True)
+        return os.path.join(logs_dir, f"truth_vcf_{file_pair_index}_error.log")
+
+    def get_error_analysis_metric_path(self, file_pair_index, file_index):
+        input_files = self.config['input_file'][file_pair_index]
+        input_file_path = self.get_full_path(input_files[file_index])
+        base_filename = os.path.basename(input_file_path)
+        metrics_filename = f"error_analysis_metrics_{base_filename}.csv"
+        metrics_dir = os.path.abspath(os.path.join(self.project_base_dir, 'Error_Analysis_Scripts', 'Logs', 'metrics'))
+        os.makedirs(metrics_dir, exist_ok=True)
+        return os.path.join(metrics_dir, metrics_filename)
+
+    def get_error_analysis_script_path(self, job_index, file_pair_index, file_index):
+        scripts_dir = os.path.join(self.project_base_dir, 'Error_Analysis_Scripts', 'Logs', 'JobScripts')
+        os.makedirs(scripts_dir, exist_ok=True)
+        return os.path.join(scripts_dir, f"error_analysis_{file_pair_index}_{job_index}_{file_index}.sh")
+
+    def get_build_cpp_path(self):
+        build_path = os.path.join(self.project_base_dir, 'Error_Analysis_Scripts', 'build')
+        return build_path
+
+    def get_error_analysis_output_log_path(self, job_index, file_pair_index, file_index):
+        logs_dir = os.path.join(self.project_base_dir, 'Error_Analysis_Scripts/Logs/logs')
+        os.makedirs(logs_dir, exist_ok=True)
+        return os.path.join(logs_dir, f"job_{file_pair_index}_{job_index}_{file_index}_output.log")
+
+    def get_error_analysis_error_log_path(self, job_index, file_pair_index, file_index):
+        logs_dir = os.path.join(self.project_base_dir, 'Error_Analysis_Scripts/Logs/logs')
+        os.makedirs(logs_dir, exist_ok=True)
+        return os.path.join(logs_dir, f"job_{file_pair_index}_{job_index}_{file_index}_error.log")
+
 
 if __name__ == "__main__":
     config_path = "/home/tus53997/SeqBench/Jobs/bench.json"  # Adjust the path as necessary
     pg = PathGenerator(config_path)
     job_index = 0
-    file_pair_index = 1  # example file pair index
+    file_pair_index = 0  # example file pair index
     file_index = 0  # example file index
     try:
-        print(f"Compression Metric Path: {pg.get_compressor_name(job_index, file_pair_index, file_index)}")
+        print({pg.get_input_file_path(job_index, file_pair_index, file_index)})
+        # print({pg.get_sam_path(job_index, file_pair_index, file_index)})
+        # print({pg.get_sorted_bam_path(job_index, file_pair_index, file_index)})
+        # print({pg.get_variant_path(job_index, file_pair_index, file_index)})
+        # print({pg.get_compressed_variant_path(job_index, file_pair_index, file_index)})
+        # print({pg.get_truth_vcf_script_path(job_index, file_pair_index, file_index)})
+        # print({pg.get_vcf_script_path(job_index, file_pair_index, file_index)})
     except Exception as e:
         print(f"Error: {e}")

@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -shared  -o libfastq_metrics.so CMakeFiles/fastq_metrics.dir/fastq_metrics_bindings.cpp.o 

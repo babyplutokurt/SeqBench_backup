@@ -1,0 +1,3 @@
+/home/tus53997/SeqBench/Error_Analysis_Scripts/build/CMakeFiles/fastq_metrics.dir
+/home/tus53997/SeqBench/Error_Analysis_Scripts/build/CMakeFiles/edit_cache.dir
+/home/tus53997/SeqBench/Error_Analysis_Scripts/build/CMakeFiles/rebuild_cache.dir

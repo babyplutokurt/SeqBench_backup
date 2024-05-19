@@ -1,35 +1,27 @@
 ----------------------------------------
-Begin Batch Job Prologue Wed May 15 11:14:54 EDT 2024
-Job ID:           1880365
+Begin Batch Job Prologue Sun May 19 19:05:36 EDT 2024
+Job ID:           72069
 Username:         tus53997
 Group:            cis
 Job Name:         job_0_2_1
-Resources List:   walltime=24:00:00,nodes=1:ppn=28,neednodes=1:ppn=28
-Queue:            normal
+Resources List:   walltime=24:00:00,nodes=1:ppn=8,neednodes=1:ppn=8
+Queue:            compute
 Account:          
-Nodes:            b080 
+Nodes:            c04 
 ----------------------------------------
-End Batch Job Prologue Wed May 15 11:14:54 EDT 2024
+End Batch Job Prologue Sun May 19 19:05:36 EDT 2024
 ----------------------------------------
-Temporary directory: ./tmp.hMaiRrV41m/
-Starting decompression...
-Untarring tar archive ...
-Untarring archive done!
-Decompressing ...
-Decompression done!
-Total time for decompression: 1 s
 ----------------------------------------
-Begin Batch Job Epilogue Wed May 15 11:15:33 EDT 2024
-Job ID:           1880365
+Begin Batch Job Epilogue Sun May 19 19:15:09 EDT 2024
+Job ID:           72069
 Username:         tus53997
 Group:            cis
 Job Name:         job_0_2_1
-Session:          6059
-Limits:           walltime=24:00:00,nodes=1:ppn=28,neednodes=1:ppn=28
-Resources:        cput=00:04:52,vmem=591056kb,walltime=00:00:39,mem=313068kb,energy_used=0
-Queue:            normal
+Session:          176443
+Limits:           walltime=24:00:00,nodes=1:ppn=8,neednodes=1:ppn=8
+Resources:        cput=00:15:35,vmem=157364kb,walltime=00:09:33,mem=82180kb,energy_used=0
+Queue:            compute
 Account:          
-Deleting /dev/shm/*...
 ----------------------------------------
-End Batch Job Epilogue Wed May 15 11:15:54 EDT 2024
+End Batch Job Epilogue Sun May 19 19:15:19 EDT 2024
 ----------------------------------------

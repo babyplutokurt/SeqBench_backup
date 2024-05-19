@@ -141,7 +141,8 @@ class CommandGeneratorFactory:
                             job_commands = generator.generate_commands(job_index, file_pair_index, file_index)
                             command_for_current_job.append(job_commands)
                         except Exception as e:
-                            logging.warning(f"Failed to generate commands for job {job['name']} at index {job_index}: {e}")
+                            logging.warning(
+                                f"Failed to generate commands for job {job['name']} at index {job_index}: {e}")
                 else:
                     logging.info(f"No generator found for {job['name']}. Skipping...")
                 commands_for_current_file_pair.append(command_for_current_job)
@@ -150,6 +151,7 @@ class CommandGeneratorFactory:
 
 
 if __name__ == "__main__":
+
     config_path = "/home/tus53997/SeqBench/Jobs/bench.json"
     factory = CommandGeneratorFactory(config_path)
     all_commands = factory.generate_all_commands()
@@ -160,4 +162,3 @@ if __name__ == "__main__":
                 for cmd in command:
                     print(cmd)
                 print('-' * 50)
-

@@ -1,0 +1,27 @@
+----------------------------------------
+Begin Batch Job Prologue Sun May 19 19:54:13 EDT 2024
+Job ID:           72102
+Username:         tus53997
+Group:            cis
+Job Name:         error_analysis_0_6_0
+Resources List:   walltime=24:00:00,nodes=1:ppn=8,neednodes=1:ppn=8
+Queue:            compute
+Account:          
+Nodes:            c02 
+----------------------------------------
+End Batch Job Prologue Sun May 19 19:54:13 EDT 2024
+----------------------------------------
+----------------------------------------
+Begin Batch Job Epilogue Sun May 19 19:55:28 EDT 2024
+Job ID:           72102
+Username:         tus53997
+Group:            cis
+Job Name:         error_analysis_0_6_0
+Session:          113833
+Limits:           walltime=24:00:00,nodes=1:ppn=8,neednodes=1:ppn=8
+Resources:        cput=00:06:49,vmem=699212kb,walltime=00:01:16,mem=13312kb,energy_used=0
+Queue:            compute
+Account:          
+----------------------------------------
+End Batch Job Epilogue Sun May 19 19:55:38 EDT 2024
+----------------------------------------
