@@ -14,11 +14,11 @@
 [M::mem_pestat] low and high boundaries for proper pairs: (1, 4801)
 [M::mem_pestat] skip orientation RR as there are not enough pairs
 [M::mem_pestat] skip orientation RF
-[M::mem_process_seqs] Processed 840350 reads in 90.544 CPU sec, 4.199 real sec
+[M::mem_process_seqs] Processed 840350 reads in 82.554 CPU sec, 5.575 real sec
 [main] Version: 0.7.18-r1243-dirty
-[main] CMD: bwa mem -t 24 /home/tus53997/SeqBench/RefSeq/GCF_000013425.1_ASM1342v1_genomic.fna /home/tus53997/work/DecompressedOutput/ERR103405_1.fastq_-Q_5.fqz.fastq /home/tus53997/work/DecompressedOutput/ERR103405_2.fastq_-Q_5.fqz.fastq
-[main] Real time: 6.227 sec; CPU: 92.118 sec
-[bam_sort_core] merging from 0 files and 24 in-memory blocks...
-[mpileup] 1 samples in 1 input files
+[main] CMD: bwa mem -t 48 /home/tus53997/work/work/RefSeq/GCF_000013425.1_ASM1342v1_genomic.fna /home/tus53997/work/work/DecompressedOutput/ERR103405_1.fastq_-Q_1.fqz.fastq /home/tus53997/work/work/DecompressedOutput/ERR103405_2.fastq_-Q_1.fqz.fastq
+[main] Real time: 7.927 sec; CPU: 84.605 sec
+[bam_sort_core] merging from 0 files and 48 in-memory blocks...
 Note: none of --samples-file, --ploidy or --ploidy-file given, assuming all sites are diploid
+[mpileup] 1 samples in 1 input files
 [mpileup] maximum number of reads per input file set to -d 250

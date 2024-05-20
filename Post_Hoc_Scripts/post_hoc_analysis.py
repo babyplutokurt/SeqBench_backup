@@ -13,7 +13,7 @@ from Compression_Scripts.dependency_linker import DependencyLinker
 
 class PostHocAnalysis:
     def __init__(self, config_name, template_path="/home/tus53997/SeqBench/Scripts_Template/Nest_truth_vcf.sh",
-                 job_template_path="/home/tus53997/SeqBench/Scripts_Template/Nest_F1_score_compute.shh",
+                 job_template_path="/home/tus53997/SeqBench/Scripts_Template/Nest_F1_score_compute.sh",
                  dependency_file="/home/tus53997/SeqBench/Compression_Scripts/Logs/job_dependencies.json"):
         self.config = self.load_config(config_name)
         self.path_generator = PathGenerator(config_name)

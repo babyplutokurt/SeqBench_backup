@@ -1,27 +1,28 @@
 ----------------------------------------
-Begin Batch Job Prologue Mon May 20 13:49:31 EDT 2024
-Job ID:           72147
+Begin Batch Job Prologue Mon May 20 14:41:11 EDT 2024
+Job ID:           1888931
 Username:         tus53997
 Group:            cis
 Job Name:         error_analysis_0_0_0
 Resources List:   walltime=48:00:00,nodes=1:ppn=24,neednodes=1:ppn=24
-Queue:            compute
+Queue:            normal
 Account:          
-Nodes:            c06 
+Nodes:            b172 
 ----------------------------------------
-End Batch Job Prologue Mon May 20 13:49:31 EDT 2024
+End Batch Job Prologue Mon May 20 14:41:12 EDT 2024
 ----------------------------------------
 ----------------------------------------
-Begin Batch Job Epilogue Mon May 20 13:49:34 EDT 2024
-Job ID:           72147
+Begin Batch Job Epilogue Mon May 20 14:41:18 EDT 2024
+Job ID:           1888931
 Username:         tus53997
 Group:            cis
 Job Name:         error_analysis_0_0_0
-Session:          82865
+Session:          29041
 Limits:           walltime=48:00:00,nodes=1:ppn=24,neednodes=1:ppn=24
-Resources:        cput=00:00:16,vmem=1780612kb,walltime=00:00:03,mem=11264kb,energy_used=0
-Queue:            compute
+Resources:        cput=00:00:22,vmem=33220kb,walltime=00:00:07,mem=4692kb,energy_used=0
+Queue:            normal
 Account:          
+Deleting /dev/shm/*...
 ----------------------------------------
-End Batch Job Epilogue Mon May 20 13:49:44 EDT 2024
+End Batch Job Epilogue Mon May 20 14:41:39 EDT 2024
 ----------------------------------------

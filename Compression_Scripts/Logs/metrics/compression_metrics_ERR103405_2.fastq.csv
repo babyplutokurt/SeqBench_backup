@@ -1,2 +1,8 @@
 job_id_compression,Compressor_Name,Compression_Time,Decompression_Time,Ratio
-job_0_0_1,fqzcomp_-Q_5,4,4,9.432571
+job_0_0_1,fqzcomp_-Q_1,4,4,6.818644
+job_0_4_1,fqzcomp_-Q_10,3,3,10.495627
+job_0_2_1,fqzcomp_-Q_5,3,3,9.432571
+job_0_3_1,fqzcomp_-Q_8,3,3,10.252441
+job_0_1_1,fqzcomp_-Q_2,3,4,7.718494
+job_0_5_1,fqzcomp_-Q_15,3,3,10.617872
+job_0_6_1,fqzcomp_-Q_20,3,4,10.101471
