@@ -1,5 +1,6 @@
 {
-  "project-home": "",
+  "project_home": "",
+  "storage_dir": "/home/tus53997/work",
   "nodes": 1,
   "ppn": 24,
   "walltime": "48:00:00",

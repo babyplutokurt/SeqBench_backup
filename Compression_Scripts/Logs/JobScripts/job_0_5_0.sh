@@ -1,8 +1,8 @@
 #!/bin/sh
-#PBS -l walltime=24:00:00
+#PBS -l walltime=48:00:00
 #PBS -N job_0_5_0
-#PBS -l nodes=1:ppn=8
-#PBS -M @
+#PBS -l nodes=1:ppn=24
+#PBS -M taolue.yang@temple.edu
 #PBS -o /home/tus53997/SeqBench/Compression_Scripts/Logs/logs/job_0_5_0_output.log
 #PBS -e /home/tus53997/SeqBench/Compression_Scripts/Logs/logs/job_0_5_0_error.log
 

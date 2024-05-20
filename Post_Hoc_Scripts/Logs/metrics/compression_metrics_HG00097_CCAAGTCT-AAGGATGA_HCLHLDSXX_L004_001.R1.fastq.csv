@@ -1,1 +1,8 @@
 job_id,Compressor_Name,True_Positives(TP),False_Positives(FP),False_Negatives(FN),Precision,Recall,F1_Score
+post_hoc_0_0_0,fqzcomp_-Q_1,3175633, 1320, 6291, .999584, .998022, .998801
+post_hoc_0_2_0,fqzcomp_-Q_5,3128917, 4204, 53007, .998658, .983341, .990939
+post_hoc_0_1_0,fqzcomp_-Q_2,3164439, 2335, 17485, .999262, .994504, .996877
+post_hoc_0_3_0,fqzcomp_-Q_8,2729646, 6800, 452278, .997515, .857860, .922431
+post_hoc_0_4_0,fqzcomp_-Q_10,2694283, 7283, 487641, .997304, .846746, .915878
+post_hoc_0_5_0,fqzcomp_-Q_15,2366395, 8232, 815529, .996533, .743699, .851748
+post_hoc_0_6_0,fqzcomp_-Q_20,2104875, 9423, 1077049, .995543, .661510, .794858

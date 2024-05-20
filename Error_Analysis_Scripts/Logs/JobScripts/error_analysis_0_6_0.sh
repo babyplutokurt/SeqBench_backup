@@ -1,9 +1,10 @@
 #!/bin/sh
-#PBS -l walltime=24:00:00
+#PBS -l walltime=48:00:00
 #PBS -N error_analysis_0_6_0
-#PBS -l nodes=1:ppn=8
+#PBS -l nodes=1:ppn=24
 #PBS -o /home/tus53997/SeqBench/Error_Analysis_Scripts/Logs/logs/job_0_6_0_output.log
 #PBS -e /home/tus53997/SeqBench/Error_Analysis_Scripts/Logs/logs/job_0_6_0_error.log
+#PBS -W depend=afterok:72116
 
 
 # Change to the working directory
@@ -18,7 +19,7 @@ sys.path.append('/home/tus53997/SeqBench/Error_Analysis_Scripts/build')
 import fastq_metrics
 original_file = '/home/tus53997/SeqBench/FASTQ/HG00097_CCAAGTCT-AAGGATGA_HCLHLDSXX_L004_001.R1.fastq'
 decompressed_file = '/home/tus53997/SeqBench/DecompressedOutput/HG00097_CCAAGTCT-AAGGATGA_HCLHLDSXX_L004_001.R1.fastq_-Q_20.fqz.fastq'
-threads = 8
+threads = 24
 mse_v3, psnr_v3 = fastq_metrics.calculate_mse_psnr_v3(original_file, decompressed_file, threads)
 print(f'{mse_v3},{psnr_v3}')
 ")

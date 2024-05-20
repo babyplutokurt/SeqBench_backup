@@ -20,7 +20,7 @@
 [M::mem_pestat] skip orientation RR as there are not enough pairs
 [M::mem_pestat] skip orientation FF
 [M::mem_pestat] skip orientation RF
-[M::mem_process_seqs] Processed 1600000 reads in 927.042 CPU sec, 43.384 real sec
+[M::mem_process_seqs] Processed 1600000 reads in 965.293 CPU sec, 49.344 real sec
 [M::process] read 1600000 sequences (240000000 bp)...
 [M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (30, 678514, 206, 10)
 [M::mem_pestat] analyzing insert size distribution for orientation FF...
@@ -46,7 +46,7 @@
 [M::mem_pestat] skip orientation FF
 [M::mem_pestat] skip orientation RF
 [M::mem_pestat] skip orientation RR
-[M::mem_process_seqs] Processed 1600000 reads in 914.323 CPU sec, 39.246 real sec
+[M::mem_process_seqs] Processed 1600000 reads in 930.294 CPU sec, 39.961 real sec
 [M::process] read 1600000 sequences (240000000 bp)...
 [M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (28, 679149, 218, 3)
 [M::mem_pestat] analyzing insert size distribution for orientation FF...
@@ -67,7 +67,7 @@
 [M::mem_pestat] skip orientation RR as there are not enough pairs
 [M::mem_pestat] skip orientation FF
 [M::mem_pestat] skip orientation RF
-[M::mem_process_seqs] Processed 1600000 reads in 911.781 CPU sec, 38.747 real sec
+[M::mem_process_seqs] Processed 1600000 reads in 925.937 CPU sec, 39.326 real sec
 [M::process] read 1600000 sequences (240000000 bp)...
 [M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (31, 678733, 195, 11)
 [M::mem_pestat] analyzing insert size distribution for orientation FF...
@@ -93,7 +93,7 @@
 [M::mem_pestat] skip orientation FF
 [M::mem_pestat] skip orientation RF
 [M::mem_pestat] skip orientation RR
-[M::mem_process_seqs] Processed 1600000 reads in 904.820 CPU sec, 38.448 real sec
+[M::mem_process_seqs] Processed 1600000 reads in 921.660 CPU sec, 39.228 real sec
 [M::process] read 1600000 sequences (240000000 bp)...
 [M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (39, 678008, 189, 5)
 [M::mem_pestat] analyzing insert size distribution for orientation FF...
@@ -114,7 +114,7 @@
 [M::mem_pestat] skip orientation RR as there are not enough pairs
 [M::mem_pestat] skip orientation FF
 [M::mem_pestat] skip orientation RF
-[M::mem_process_seqs] Processed 1600000 reads in 893.801 CPU sec, 37.943 real sec
+[M::mem_process_seqs] Processed 1600000 reads in 910.694 CPU sec, 38.671 real sec
 [M::process] read 1600000 sequences (240000000 bp)...
 [M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (26, 678156, 201, 9)
 [M::mem_pestat] analyzing insert size distribution for orientation FF...
@@ -135,7 +135,7 @@
 [M::mem_pestat] skip orientation RR as there are not enough pairs
 [M::mem_pestat] skip orientation FF
 [M::mem_pestat] skip orientation RF
-[M::mem_process_seqs] Processed 1600000 reads in 890.073 CPU sec, 37.594 real sec
+[M::mem_process_seqs] Processed 1600000 reads in 908.977 CPU sec, 38.401 real sec
 [M::process] read 1600000 sequences (240000000 bp)...
 [M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (39, 677979, 199, 15)
 [M::mem_pestat] analyzing insert size distribution for orientation FF...
@@ -161,7 +161,7 @@
 [M::mem_pestat] skip orientation FF
 [M::mem_pestat] skip orientation RF
 [M::mem_pestat] skip orientation RR
-[M::mem_process_seqs] Processed 1600000 reads in 887.793 CPU sec, 37.968 real sec
+[M::mem_process_seqs] Processed 1600000 reads in 907.659 CPU sec, 38.706 real sec
 [M::process] read 1600000 sequences (240000000 bp)...
 [M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (39, 678378, 216, 6)
 [M::mem_pestat] analyzing insert size distribution for orientation FF...
@@ -182,7 +182,7 @@
 [M::mem_pestat] skip orientation RR as there are not enough pairs
 [M::mem_pestat] skip orientation FF
 [M::mem_pestat] skip orientation RF
-[M::mem_process_seqs] Processed 1600000 reads in 912.264 CPU sec, 38.786 real sec
+[M::mem_process_seqs] Processed 1600000 reads in 931.170 CPU sec, 39.474 real sec
 [M::process] read 1600000 sequences (240000000 bp)...
 [M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (21, 678550, 192, 10)
 [M::mem_pestat] analyzing insert size distribution for orientation FF...
@@ -208,7 +208,7 @@
 [M::mem_pestat] skip orientation FF
 [M::mem_pestat] skip orientation RF
 [M::mem_pestat] skip orientation RR
-[M::mem_process_seqs] Processed 1600000 reads in 897.135 CPU sec, 38.067 real sec
+[M::mem_process_seqs] Processed 1600000 reads in 920.374 CPU sec, 39.110 real sec
 [M::process] read 1600000 sequences (240000000 bp)...
 [M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (40, 678135, 235, 8)
 [M::mem_pestat] analyzing insert size distribution for orientation FF...
@@ -229,7 +229,7 @@
 [M::mem_pestat] skip orientation RR as there are not enough pairs
 [M::mem_pestat] skip orientation FF
 [M::mem_pestat] skip orientation RF
-[M::mem_process_seqs] Processed 1600000 reads in 895.376 CPU sec, 37.960 real sec
+[M::mem_process_seqs] Processed 1600000 reads in 910.879 CPU sec, 38.644 real sec
 [M::process] read 1600000 sequences (240000000 bp)...
 [M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (26, 678213, 217, 9)
 [M::mem_pestat] analyzing insert size distribution for orientation FF...
@@ -250,7 +250,7 @@
 [M::mem_pestat] skip orientation RR as there are not enough pairs
 [M::mem_pestat] skip orientation FF
 [M::mem_pestat] skip orientation RF
-[M::mem_process_seqs] Processed 1600000 reads in 898.088 CPU sec, 38.151 real sec
+[M::mem_process_seqs] Processed 1600000 reads in 914.133 CPU sec, 38.801 real sec
 [M::process] read 1600000 sequences (240000000 bp)...
 [M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (27, 678909, 237, 11)
 [M::mem_pestat] analyzing insert size distribution for orientation FF...
@@ -276,7 +276,7 @@
 [M::mem_pestat] skip orientation FF
 [M::mem_pestat] skip orientation RF
 [M::mem_pestat] skip orientation RR
-[M::mem_process_seqs] Processed 1600000 reads in 921.467 CPU sec, 39.124 real sec
+[M::mem_process_seqs] Processed 1600000 reads in 934.886 CPU sec, 39.652 real sec
 [M::process] read 1600000 sequences (240000000 bp)...
 [M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (14, 678269, 204, 13)
 [M::mem_pestat] analyzing insert size distribution for orientation FF...
@@ -302,7 +302,7 @@
 [M::mem_pestat] skip orientation FF
 [M::mem_pestat] skip orientation RF
 [M::mem_pestat] skip orientation RR
-[M::mem_process_seqs] Processed 1600000 reads in 909.786 CPU sec, 38.587 real sec
+[M::mem_process_seqs] Processed 1600000 reads in 927.612 CPU sec, 39.358 real sec
 [M::process] read 1600000 sequences (240000000 bp)...
 [M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (28, 678311, 215, 9)
 [M::mem_pestat] analyzing insert size distribution for orientation FF...
@@ -323,7 +323,7 @@
 [M::mem_pestat] skip orientation RR as there are not enough pairs
 [M::mem_pestat] skip orientation FF
 [M::mem_pestat] skip orientation RF
-[M::mem_process_seqs] Processed 1600000 reads in 897.321 CPU sec, 38.110 real sec
+[M::mem_process_seqs] Processed 1600000 reads in 918.102 CPU sec, 38.950 real sec
 [M::process] read 1600000 sequences (240000000 bp)...
 [M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (17, 679112, 203, 13)
 [M::mem_pestat] analyzing insert size distribution for orientation FF...
@@ -349,7 +349,7 @@
 [M::mem_pestat] skip orientation FF
 [M::mem_pestat] skip orientation RF
 [M::mem_pestat] skip orientation RR
-[M::mem_process_seqs] Processed 1600000 reads in 911.657 CPU sec, 38.700 real sec
+[M::mem_process_seqs] Processed 1600000 reads in 931.784 CPU sec, 39.528 real sec
 [M::process] read 1600000 sequences (240000000 bp)...
 [M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (23, 678567, 215, 9)
 [M::mem_pestat] analyzing insert size distribution for orientation FF...
@@ -370,7 +370,7 @@
 [M::mem_pestat] skip orientation RR as there are not enough pairs
 [M::mem_pestat] skip orientation FF
 [M::mem_pestat] skip orientation RF
-[M::mem_process_seqs] Processed 1600000 reads in 922.683 CPU sec, 39.127 real sec
+[M::mem_process_seqs] Processed 1600000 reads in 939.562 CPU sec, 39.901 real sec
 [M::process] read 1600000 sequences (240000000 bp)...
 [M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (32, 679258, 234, 11)
 [M::mem_pestat] analyzing insert size distribution for orientation FF...
@@ -396,7 +396,7 @@
 [M::mem_pestat] skip orientation FF
 [M::mem_pestat] skip orientation RF
 [M::mem_pestat] skip orientation RR
-[M::mem_process_seqs] Processed 1600000 reads in 911.897 CPU sec, 38.756 real sec
+[M::mem_process_seqs] Processed 1600000 reads in 935.636 CPU sec, 39.648 real sec
 [M::process] read 1600000 sequences (240000000 bp)...
 [M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (25, 678999, 177, 9)
 [M::mem_pestat] analyzing insert size distribution for orientation FF...
@@ -417,7 +417,7 @@
 [M::mem_pestat] skip orientation RR as there are not enough pairs
 [M::mem_pestat] skip orientation FF
 [M::mem_pestat] skip orientation RF
-[M::mem_process_seqs] Processed 1600000 reads in 894.774 CPU sec, 37.944 real sec
+[M::mem_process_seqs] Processed 1600000 reads in 914.184 CPU sec, 38.735 real sec
 [M::process] read 1600000 sequences (240000000 bp)...
 [M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (25, 679621, 237, 11)
 [M::mem_pestat] analyzing insert size distribution for orientation FF...
@@ -443,7 +443,7 @@
 [M::mem_pestat] skip orientation FF
 [M::mem_pestat] skip orientation RF
 [M::mem_pestat] skip orientation RR
-[M::mem_process_seqs] Processed 1600000 reads in 939.211 CPU sec, 39.836 real sec
+[M::mem_process_seqs] Processed 1600000 reads in 959.556 CPU sec, 40.718 real sec
 [M::process] read 1600000 sequences (240000000 bp)...
 [M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (19, 679821, 234, 10)
 [M::mem_pestat] analyzing insert size distribution for orientation FF...
@@ -469,7 +469,7 @@
 [M::mem_pestat] skip orientation FF
 [M::mem_pestat] skip orientation RF
 [M::mem_pestat] skip orientation RR
-[M::mem_process_seqs] Processed 1600000 reads in 925.695 CPU sec, 39.404 real sec
+[M::mem_process_seqs] Processed 1600000 reads in 942.783 CPU sec, 40.028 real sec
 [M::process] read 1600000 sequences (240000000 bp)...
 [M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (20, 679597, 231, 12)
 [M::mem_pestat] analyzing insert size distribution for orientation FF...
@@ -495,7 +495,7 @@
 [M::mem_pestat] skip orientation FF
 [M::mem_pestat] skip orientation RF
 [M::mem_pestat] skip orientation RR
-[M::mem_process_seqs] Processed 1600000 reads in 919.350 CPU sec, 39.043 real sec
+[M::mem_process_seqs] Processed 1600000 reads in 937.395 CPU sec, 39.775 real sec
 [M::process] read 1600000 sequences (240000000 bp)...
 [M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (22, 679112, 210, 17)
 [M::mem_pestat] analyzing insert size distribution for orientation FF...
@@ -521,7 +521,7 @@
 [M::mem_pestat] skip orientation FF
 [M::mem_pestat] skip orientation RF
 [M::mem_pestat] skip orientation RR
-[M::mem_process_seqs] Processed 1600000 reads in 908.579 CPU sec, 38.552 real sec
+[M::mem_process_seqs] Processed 1600000 reads in 929.734 CPU sec, 39.412 real sec
 [M::process] read 1600000 sequences (240000000 bp)...
 [M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (19, 678577, 218, 17)
 [M::mem_pestat] analyzing insert size distribution for orientation FF...
@@ -547,7 +547,7 @@
 [M::mem_pestat] skip orientation FF
 [M::mem_pestat] skip orientation RF
 [M::mem_pestat] skip orientation RR
-[M::mem_process_seqs] Processed 1600000 reads in 907.014 CPU sec, 38.546 real sec
+[M::mem_process_seqs] Processed 1600000 reads in 930.223 CPU sec, 39.461 real sec
 [M::process] read 1600000 sequences (240000000 bp)...
 [M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (21, 678823, 202, 10)
 [M::mem_pestat] analyzing insert size distribution for orientation FF...
@@ -573,7 +573,7 @@
 [M::mem_pestat] skip orientation FF
 [M::mem_pestat] skip orientation RF
 [M::mem_pestat] skip orientation RR
-[M::mem_process_seqs] Processed 1600000 reads in 902.781 CPU sec, 38.396 real sec
+[M::mem_process_seqs] Processed 1600000 reads in 923.211 CPU sec, 39.260 real sec
 [M::process] read 1600000 sequences (240000000 bp)...
 [M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (37, 678053, 172, 12)
 [M::mem_pestat] analyzing insert size distribution for orientation FF...
@@ -599,7 +599,7 @@
 [M::mem_pestat] skip orientation FF
 [M::mem_pestat] skip orientation RF
 [M::mem_pestat] skip orientation RR
-[M::mem_process_seqs] Processed 1600000 reads in 906.285 CPU sec, 38.481 real sec
+[M::mem_process_seqs] Processed 1600000 reads in 930.109 CPU sec, 39.471 real sec
 [M::process] read 1600000 sequences (240000000 bp)...
 [M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (32, 678403, 221, 9)
 [M::mem_pestat] analyzing insert size distribution for orientation FF...
@@ -620,7 +620,7 @@
 [M::mem_pestat] skip orientation RR as there are not enough pairs
 [M::mem_pestat] skip orientation FF
 [M::mem_pestat] skip orientation RF
-[M::mem_process_seqs] Processed 1600000 reads in 902.248 CPU sec, 38.301 real sec
+[M::mem_process_seqs] Processed 1600000 reads in 924.890 CPU sec, 39.223 real sec
 [M::process] read 1600000 sequences (240000000 bp)...
 [M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (35, 678264, 199, 7)
 [M::mem_pestat] analyzing insert size distribution for orientation FF...
@@ -641,7 +641,7 @@
 [M::mem_pestat] skip orientation RR as there are not enough pairs
 [M::mem_pestat] skip orientation FF
 [M::mem_pestat] skip orientation RF
-[M::mem_process_seqs] Processed 1600000 reads in 895.078 CPU sec, 37.979 real sec
+[M::mem_process_seqs] Processed 1600000 reads in 918.968 CPU sec, 38.959 real sec
 [M::process] read 1600000 sequences (240000000 bp)...
 [M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (37, 678276, 217, 12)
 [M::mem_pestat] analyzing insert size distribution for orientation FF...
@@ -667,7 +667,7 @@
 [M::mem_pestat] skip orientation FF
 [M::mem_pestat] skip orientation RF
 [M::mem_pestat] skip orientation RR
-[M::mem_process_seqs] Processed 1600000 reads in 887.917 CPU sec, 37.692 real sec
+[M::mem_process_seqs] Processed 1600000 reads in 912.031 CPU sec, 38.670 real sec
 [M::process] read 1600000 sequences (240000000 bp)...
 [M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (34, 678115, 178, 9)
 [M::mem_pestat] analyzing insert size distribution for orientation FF...
@@ -688,7 +688,7 @@
 [M::mem_pestat] skip orientation RR as there are not enough pairs
 [M::mem_pestat] skip orientation FF
 [M::mem_pestat] skip orientation RF
-[M::mem_process_seqs] Processed 1600000 reads in 898.433 CPU sec, 38.112 real sec
+[M::mem_process_seqs] Processed 1600000 reads in 918.970 CPU sec, 39.038 real sec
 [M::process] read 1600000 sequences (240000000 bp)...
 [M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (22, 678735, 210, 8)
 [M::mem_pestat] analyzing insert size distribution for orientation FF...
@@ -709,7 +709,7 @@
 [M::mem_pestat] skip orientation RR as there are not enough pairs
 [M::mem_pestat] skip orientation FF
 [M::mem_pestat] skip orientation RF
-[M::mem_process_seqs] Processed 1600000 reads in 907.158 CPU sec, 38.523 real sec
+[M::mem_process_seqs] Processed 1600000 reads in 931.473 CPU sec, 39.580 real sec
 [M::process] read 1600000 sequences (240000000 bp)...
 [M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (38, 678461, 208, 13)
 [M::mem_pestat] analyzing insert size distribution for orientation FF...
@@ -735,7 +735,7 @@
 [M::mem_pestat] skip orientation FF
 [M::mem_pestat] skip orientation RF
 [M::mem_pestat] skip orientation RR
-[M::mem_process_seqs] Processed 1600000 reads in 895.569 CPU sec, 37.783 real sec
+[M::mem_process_seqs] Processed 1600000 reads in 918.966 CPU sec, 38.804 real sec
 [M::process] read 1600000 sequences (240000000 bp)...
 [M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (41, 677802, 178, 9)
 [M::mem_pestat] analyzing insert size distribution for orientation FF...
@@ -756,7 +756,7 @@
 [M::mem_pestat] skip orientation RR as there are not enough pairs
 [M::mem_pestat] skip orientation FF
 [M::mem_pestat] skip orientation RF
-[M::mem_process_seqs] Processed 1600000 reads in 903.848 CPU sec, 38.618 real sec
+[M::mem_process_seqs] Processed 1600000 reads in 927.697 CPU sec, 39.669 real sec
 [M::process] read 1600000 sequences (240000000 bp)...
 [M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (27, 679274, 213, 13)
 [M::mem_pestat] analyzing insert size distribution for orientation FF...
@@ -782,7 +782,7 @@
 [M::mem_pestat] skip orientation FF
 [M::mem_pestat] skip orientation RF
 [M::mem_pestat] skip orientation RR
-[M::mem_process_seqs] Processed 1600000 reads in 914.478 CPU sec, 38.847 real sec
+[M::mem_process_seqs] Processed 1600000 reads in 936.662 CPU sec, 39.728 real sec
 [M::process] read 1600000 sequences (240000000 bp)...
 [M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (29, 678636, 193, 15)
 [M::mem_pestat] analyzing insert size distribution for orientation FF...
@@ -808,7 +808,7 @@
 [M::mem_pestat] skip orientation FF
 [M::mem_pestat] skip orientation RF
 [M::mem_pestat] skip orientation RR
-[M::mem_process_seqs] Processed 1600000 reads in 915.469 CPU sec, 38.858 real sec
+[M::mem_process_seqs] Processed 1600000 reads in 938.127 CPU sec, 39.864 real sec
 [M::process] read 1600000 sequences (240000000 bp)...
 [M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (25, 678225, 220, 18)
 [M::mem_pestat] analyzing insert size distribution for orientation FF...
@@ -834,7 +834,7 @@
 [M::mem_pestat] skip orientation FF
 [M::mem_pestat] skip orientation RF
 [M::mem_pestat] skip orientation RR
-[M::mem_process_seqs] Processed 1600000 reads in 906.680 CPU sec, 38.461 real sec
+[M::mem_process_seqs] Processed 1600000 reads in 929.539 CPU sec, 39.380 real sec
 [M::process] read 1600000 sequences (240000000 bp)...
 [M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (37, 678307, 209, 7)
 [M::mem_pestat] analyzing insert size distribution for orientation FF...
@@ -855,7 +855,7 @@
 [M::mem_pestat] skip orientation RR as there are not enough pairs
 [M::mem_pestat] skip orientation FF
 [M::mem_pestat] skip orientation RF
-[M::mem_process_seqs] Processed 1600000 reads in 909.653 CPU sec, 38.571 real sec
+[M::mem_process_seqs] Processed 1600000 reads in 932.827 CPU sec, 39.590 real sec
 [M::process] read 1600000 sequences (240000000 bp)...
 [M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (20, 679617, 181, 7)
 [M::mem_pestat] analyzing insert size distribution for orientation FF...
@@ -876,7 +876,7 @@
 [M::mem_pestat] skip orientation RR as there are not enough pairs
 [M::mem_pestat] skip orientation FF
 [M::mem_pestat] skip orientation RF
-[M::mem_process_seqs] Processed 1600000 reads in 919.458 CPU sec, 38.802 real sec
+[M::mem_process_seqs] Processed 1600000 reads in 943.695 CPU sec, 39.845 real sec
 [M::process] read 1600000 sequences (240000000 bp)...
 [M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (24, 678572, 220, 9)
 [M::mem_pestat] analyzing insert size distribution for orientation FF...
@@ -897,7 +897,7 @@
 [M::mem_pestat] skip orientation RR as there are not enough pairs
 [M::mem_pestat] skip orientation FF
 [M::mem_pestat] skip orientation RF
-[M::mem_process_seqs] Processed 1600000 reads in 905.383 CPU sec, 38.884 real sec
+[M::mem_process_seqs] Processed 1600000 reads in 930.561 CPU sec, 39.802 real sec
 [M::process] read 1600000 sequences (240000000 bp)...
 [M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (21, 678356, 237, 10)
 [M::mem_pestat] analyzing insert size distribution for orientation FF...
@@ -923,7 +923,7 @@
 [M::mem_pestat] skip orientation FF
 [M::mem_pestat] skip orientation RF
 [M::mem_pestat] skip orientation RR
-[M::mem_process_seqs] Processed 1600000 reads in 900.584 CPU sec, 38.238 real sec
+[M::mem_process_seqs] Processed 1600000 reads in 925.733 CPU sec, 39.418 real sec
 [M::process] read 1600000 sequences (240000000 bp)...
 [M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (27, 679303, 223, 10)
 [M::mem_pestat] analyzing insert size distribution for orientation FF...
@@ -949,7 +949,7 @@
 [M::mem_pestat] skip orientation FF
 [M::mem_pestat] skip orientation RF
 [M::mem_pestat] skip orientation RR
-[M::mem_process_seqs] Processed 1600000 reads in 929.254 CPU sec, 39.453 real sec
+[M::mem_process_seqs] Processed 1600000 reads in 952.731 CPU sec, 40.467 real sec
 [M::process] read 1600000 sequences (240000000 bp)...
 [M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (19, 678846, 252, 7)
 [M::mem_pestat] analyzing insert size distribution for orientation FF...
@@ -970,7 +970,7 @@
 [M::mem_pestat] skip orientation RR as there are not enough pairs
 [M::mem_pestat] skip orientation FF
 [M::mem_pestat] skip orientation RF
-[M::mem_process_seqs] Processed 1600000 reads in 933.578 CPU sec, 39.650 real sec
+[M::mem_process_seqs] Processed 1600000 reads in 956.792 CPU sec, 40.616 real sec
 [M::process] read 1157326 sequences (173598900 bp)...
 [M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (18, 679115, 180, 11)
 [M::mem_pestat] analyzing insert size distribution for orientation FF...
@@ -996,7 +996,7 @@
 [M::mem_pestat] skip orientation FF
 [M::mem_pestat] skip orientation RF
 [M::mem_pestat] skip orientation RR
-[M::mem_process_seqs] Processed 1600000 reads in 904.441 CPU sec, 38.293 real sec
+[M::mem_process_seqs] Processed 1600000 reads in 929.066 CPU sec, 39.443 real sec
 [M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (21, 491391, 150, 6)
 [M::mem_pestat] analyzing insert size distribution for orientation FF...
 [M::mem_pestat] (25, 50, 75) percentile: (245, 360, 708)
@@ -1016,11 +1016,11 @@
 [M::mem_pestat] skip orientation RR as there are not enough pairs
 [M::mem_pestat] skip orientation FF
 [M::mem_pestat] skip orientation RF
-[M::mem_process_seqs] Processed 1157326 reads in 652.122 CPU sec, 27.673 real sec
+[M::mem_process_seqs] Processed 1157326 reads in 671.401 CPU sec, 28.469 real sec
 [main] Version: 0.7.18-r1243-dirty
 [main] CMD: bwa mem -t 24 /home/tus53997/SeqBench/RefSeq/hg38.fa /home/tus53997/SeqBench/DecompressedOutput/HG00097_CCAAGTCT-AAGGATGA_HCLHLDSXX_L004_001.R1.fastq_-Q_10.fqz.fastq /home/tus53997/SeqBench/DecompressedOutput/HG00097_CCAAGTCT-AAGGATGA_HCLHLDSXX_L004_001.R2.fastq_-Q_10.fqz.fastq
-[main] Real time: 1660.808 sec; CPU: 38798.485 sec
-[bam_sort_core] merging from 1 files and 1 in-memory blocks...
-Note: none of --samples-file, --ploidy or --ploidy-file given, assuming all sites are diploid
+[main] Real time: 1700.889 sec; CPU: 39707.785 sec
+[bam_sort_core] merging from 1 files and 24 in-memory blocks...
 [mpileup] 1 samples in 1 input files
+Note: none of --samples-file, --ploidy or --ploidy-file given, assuming all sites are diploid
 [mpileup] maximum number of reads per input file set to -d 250

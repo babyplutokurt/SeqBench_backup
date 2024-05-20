@@ -12,8 +12,8 @@ from Compression_Scripts.dependency_linker import DependencyLinker
 
 
 class PostHocAnalysis:
-    def __init__(self, config_name, template_path="/home/tus53997/SeqBench/Scripts_Template/truth_vcf.sh",
-                 job_template_path="/home/tus53997/SeqBench/Scripts_Template/F1_Score_Compute.sh",
+    def __init__(self, config_name, template_path="/home/tus53997/SeqBench/Scripts_Template/Nest_truth_vcf.sh",
+                 job_template_path="/home/tus53997/SeqBench/Scripts_Template/Nest_F1_score_compute.shh",
                  dependency_file="/home/tus53997/SeqBench/Compression_Scripts/Logs/job_dependencies.json"):
         self.config = self.load_config(config_name)
         self.path_generator = PathGenerator(config_name)
@@ -74,7 +74,7 @@ class PostHocAnalysis:
             email=email,
             output_log=output_log,
             error_log=error_log,
-            threads = nodes * ppn,
+            threads = nodes * ppn * 2,
             job_header=job_header,
             reference_file=reference_file,
             input_fastq_1=input_fastq_1,
@@ -154,7 +154,7 @@ class PostHocAnalysis:
             email=email,
             output_log=output_log,
             error_log=error_log,
-            threads=nodes * ppn,
+            threads=nodes * ppn * 2,
             job_header=job_header,
             reference_file=reference_file,
             input_fastq_1=input_fastq_1,

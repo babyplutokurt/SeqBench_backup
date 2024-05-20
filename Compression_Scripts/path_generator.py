@@ -11,6 +11,9 @@ class PathGenerator:
         self.config_path = config_path
         self.project_base_dir = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
         self.config = self.load_config()
+        self.storage_dir = self.config.get('storage_dir', self.project_base_dir)
+        if self.storage_dir == '':
+            self.storage_dir = self.project_base_dir
 
     def load_config(self):
         try:
@@ -58,13 +61,13 @@ class PathGenerator:
         }
         suffix = suffix_mapper.get(job_name, ".out")
         base_filename = os.path.basename(input_file_path)
-        compressed_output_dir = os.path.abspath(os.path.join(self.project_base_dir, 'CompressedOutput'))
+        compressed_output_dir = os.path.abspath(os.path.join(self.storage_dir, 'CompressedOutput'))
         compressed_file_name = f"{base_filename}_{sanitized_option_str}{suffix}"
         return os.path.join(compressed_output_dir, compressed_file_name)
 
     def get_decompressed_output_path(self, job_index, file_pair_index, file_index):
         compressed_path = self.get_compressed_output_path(job_index, file_pair_index, file_index)
-        decompressed_output_dir = os.path.abspath(os.path.join(self.project_base_dir, 'DecompressedOutput'))
+        decompressed_output_dir = os.path.abspath(os.path.join(self.storage_dir, 'DecompressedOutput'))
         decompressed_file_name = f"{os.path.basename(compressed_path)}.fastq"
         return os.path.join(decompressed_output_dir, decompressed_file_name)
 
@@ -109,19 +112,19 @@ class PathGenerator:
     def get_truth_sam_path(self, job_index, file_pair_index, file_index):
         input_file_path = self.get_input_file_path(job_index, file_pair_index, file_index)
         sam_filename = f"{os.path.basename(input_file_path)}.sam"
-        sam_path = os.path.abspath(os.path.join(self.project_base_dir, 'SAM', sam_filename))
+        sam_path = os.path.abspath(os.path.join(self.storage_dir, 'SAM', sam_filename))
         return sam_path
 
     def get_truth_sorted_bam_path(self, job_index, file_pair_index, file_index):
         sam_path = self.get_truth_sam_path(job_index, file_pair_index, file_index)
         bam_filename = f"{os.path.basename(sam_path).replace('.sam', '')}_sorted.bam"
-        bam_path = os.path.abspath(os.path.join(self.project_base_dir, 'BAM', bam_filename))
+        bam_path = os.path.abspath(os.path.join(self.storage_dir, 'BAM', bam_filename))
         return bam_path
 
     def get_truth_variant_path(self, job_index, file_pair_index, file_index):
         bam_path = self.get_truth_sorted_bam_path(job_index, file_pair_index, file_index)
         vcf_filename = f"{os.path.basename(bam_path).replace('_sorted.bam', '')}.vcf"
-        vcf_path = os.path.abspath(os.path.join(self.project_base_dir, 'VCF', vcf_filename))
+        vcf_path = os.path.abspath(os.path.join(self.storage_dir, 'VCF', vcf_filename))
         return vcf_path
 
     def get_truth_compressed_variant_path(self, job_index, file_pair_index, file_index):
@@ -134,19 +137,19 @@ class PathGenerator:
         job_options = self.config['jobs'][job_index]['options'][0]
         sanitized_options = job_options.replace(" ", "_").replace("/", "_")
         sam_filename = f"{os.path.basename(input_file_path)}_{sanitized_options}.sam"
-        sam_path = os.path.abspath(os.path.join(self.project_base_dir, 'SAM', sam_filename))
+        sam_path = os.path.abspath(os.path.join(self.storage_dir, 'SAM', sam_filename))
         return sam_path
 
     def get_sorted_bam_path(self, job_index, file_pair_index, file_index):
         sam_path = self.get_sam_path(job_index, file_pair_index, file_index)
         bam_filename = f"{os.path.basename(sam_path).replace('.sam', '')}_sorted.bam"
-        bam_path = os.path.abspath(os.path.join(self.project_base_dir, 'BAM', bam_filename))
+        bam_path = os.path.abspath(os.path.join(self.storage_dir, 'BAM', bam_filename))
         return bam_path
 
     def get_variant_path(self, job_index, file_pair_index, file_index):
         bam_path = self.get_sorted_bam_path(job_index, file_pair_index, file_index)
         vcf_filename = f"{os.path.basename(bam_path).replace('_sorted.bam', '')}.vcf"
-        vcf_path = os.path.abspath(os.path.join(self.project_base_dir, 'VCF', vcf_filename))
+        vcf_path = os.path.abspath(os.path.join(self.storage_dir, 'VCF', vcf_filename))
         return vcf_path
 
     def get_compressed_variant_path(self, job_index, file_pair_index, file_index):
@@ -170,7 +173,7 @@ class PathGenerator:
         return os.path.join(scripts_dir, f"truth_vcf_{file_pair_index}_{job_index}.sh")
 
     def get_comparison_dir_path(self, job_index, file_pair_index, file_index):
-        comparison_dir = os.path.join(self.project_base_dir, 'VCF', 'comparison',
+        comparison_dir = os.path.join(self.storage_dir, 'VCF', 'comparison',
                                       f"{file_pair_index}_{job_index}_{file_index}")
         os.makedirs(comparison_dir, exist_ok=True)
         return comparison_dir

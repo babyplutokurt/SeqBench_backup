@@ -14,10 +14,10 @@
 [M::mem_pestat] low and high boundaries for proper pairs: (1, 4801)
 [M::mem_pestat] skip orientation RR as there are not enough pairs
 [M::mem_pestat] skip orientation RF
-[M::mem_process_seqs] Processed 840350 reads in 88.079 CPU sec, 3.914 real sec
+[M::mem_process_seqs] Processed 840350 reads in 87.819 CPU sec, 3.982 real sec
 [main] Version: 0.7.18-r1243-dirty
 [main] CMD: bwa mem -t 24 /home/tus53997/SeqBench/RefSeq/GCF_000013425.1_ASM1342v1_genomic.fna /home/tus53997/SeqBench/FASTQ/ERR103405_1.fastq /home/tus53997/SeqBench/FASTQ/ERR103405_2.fastq
-[main] Real time: 6.285 sec; CPU: 89.793 sec
+[main] Real time: 6.281 sec; CPU: 89.572 sec
 [bam_sort_core] merging from 0 files and 24 in-memory blocks...
 Note: none of --samples-file, --ploidy or --ploidy-file given, assuming all sites are diploid
 [mpileup] 1 samples in 1 input files
