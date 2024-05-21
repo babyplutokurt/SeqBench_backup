@@ -100,6 +100,58 @@ class SpringCommandGenerator(CommandGenerator):
         return commands
 
 
+class RenanoCommandGenerator(CommandGenerator):
+    def generate_commands(self, job_index, file_pair_index, file_index):
+        job = self.config['jobs'][job_index]
+        if job['name'].upper() != "RENANO":
+            return []
+
+        executable_path = COMPRESSOR_PATHS.get("RENANO")
+        if not executable_path:
+            raise ValueError("Path for Renano compressor not found.")
+
+        input_path = self.path_generator.get_input_file_path(job_index, file_pair_index, file_index)
+        output_path = self.path_generator.get_compressed_output_path(job_index, file_pair_index, file_index)
+        decompressed_path = self.path_generator.get_decompressed_output_path(job_index, file_pair_index, file_index)
+
+        if job.get('reference_based', False):
+            # Reference-based commands
+            reference_file = self.path_generator.get_reference_file_path()
+            paf_file_path = self.path_generator.get_paf_file_path(job_index, file_pair_index, file_index)
+            reference_command = f"minimap2 -x map-ont --secondary=no --cs {reference_file} {input_path} > {paf_file_path}"
+
+            compression_command = f"{executable_path} {job['options'][0]} -r {reference_file} {paf_file_path} {input_path} {output_path}"
+            decompression_command = f"{executable_path} {job['options'][1]} -r {reference_file} {output_path} {decompressed_path}"
+
+            return [reference_command, compression_command, decompression_command]
+
+        # Non-reference based commands
+        compression_command = f"{executable_path} {job['options'][0]} {input_path} {output_path}"
+        decompression_command = f"{executable_path} {job['options'][1]} {output_path} {decompressed_path}"
+
+        return [compression_command, decompression_command]
+
+class EnanoCommandGenerator(CommandGenerator):
+    def generate_commands(self, job_index, file_pair_index, file_index):
+        job = self.config['jobs'][job_index]
+        if job['name'].upper() != "ENANO":
+            return []
+
+        executable_path = COMPRESSOR_PATHS.get("ENANO")
+        if not executable_path:
+            raise ValueError("Path for Enano compressor not found.")
+
+        input_path = self.path_generator.get_input_file_path(job_index, file_pair_index, file_index)
+        output_path = self.path_generator.get_compressed_output_path(job_index, file_pair_index, file_index)
+        decompressed_path = self.path_generator.get_decompressed_output_path(job_index, file_pair_index, file_index)
+
+        # Non-reference based commands
+        compression_command = f"{executable_path} {job['options'][0]} {input_path} {output_path}"
+        decompression_command = f"{executable_path} {job['options'][1]} {output_path} {decompressed_path}"
+
+        return [compression_command, decompression_command]
+
+
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 class CommandGeneratorFactory:
@@ -108,10 +160,13 @@ class CommandGeneratorFactory:
             self.config_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'jobs', config_name)
             self.config = self.load_config()
             self.path_generator = PathGenerator(self.config_path)
+            self.validate_config()
             self.generators = {
                 'SZ3': SZ3CommandGenerator(self.config_path, self.path_generator),
                 'FQZCOMP': FQZCompCommandGenerator(self.config_path, self.path_generator),
-                'SPRING': SpringCommandGenerator(self.config_path, self.path_generator)
+                'SPRING': SpringCommandGenerator(self.config_path, self.path_generator),
+                'RENANO': RenanoCommandGenerator(self.config_path, self.path_generator),
+                'ENANO': EnanoCommandGenerator(self.config_path, self.path_generator)
             }
         except Exception as e:
             logging.error(f"Failed to initialize command generators: {e}")
@@ -127,6 +182,13 @@ class CommandGeneratorFactory:
         except json.JSONDecodeError:
             logging.error("JSON decoding error occurred while reading the configuration.")
             raise
+
+    def validate_config(self):
+        required_fields = ['input_file', 'jobs']
+        for field in required_fields:
+            if field not in self.config:
+                logging.error(f"Configuration missing required field: {field}")
+                raise ValueError(f"Configuration missing required field: {field}")
 
     def generate_all_commands(self):
         all_commands_for_files = []
@@ -151,7 +213,6 @@ class CommandGeneratorFactory:
 
 
 if __name__ == "__main__":
-
     config_path = "/home/tus53997/SeqBench/Jobs/bench.json"
     factory = CommandGeneratorFactory(config_path)
     all_commands = factory.generate_all_commands()

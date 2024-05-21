@@ -1,2 +1,4 @@
 job_id,Compressor_Name,MSE_v3,PSNR_v3
-error_analysis_0_0_1,fqzcomp_-Q_5,12.688200718372357,21.00719942396139
+error_analysis_0_0_1,enano_-t_24,0.0,inf
+error_analysis_0_1_1,renano_-t_24,0.0,inf
+error_analysis_0_2_1,fqzcomp_-Q_5,12.688200718372357,21.00719942396139

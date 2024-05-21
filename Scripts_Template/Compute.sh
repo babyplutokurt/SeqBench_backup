@@ -13,6 +13,7 @@ source {{ conda_path }} compression
 
 # Run compression and capture metrics
 START_TIME=$SECONDS
+{{ reference_command }}
 {{ compression_command }}
 END_TIME=$SECONDS
 COMPRESSION_DURATION=$((END_TIME - START_TIME))

@@ -12,8 +12,8 @@ from Compression_Scripts.dependency_linker import DependencyLinker
 
 
 class PostHocAnalysis:
-    def __init__(self, config_name, template_path="/home/tus53997/SeqBench/Scripts_Template/Nest_truth_vcf.sh",
-                 job_template_path="/home/tus53997/SeqBench/Scripts_Template/Nest_F1_score_compute.shh",
+    def __init__(self, config_name, template_path="/home/tus53997/SeqBench/Scripts_Template/truth_vcf.sh",
+                 job_template_path="/home/tus53997/SeqBench/Scripts_Template/F1_score_compute.sh",
                  dependency_file="/home/tus53997/SeqBench/Compression_Scripts/Logs/job_dependencies.json"):
         self.config = self.load_config(config_name)
         self.path_generator = PathGenerator(config_name)
@@ -44,7 +44,10 @@ class PostHocAnalysis:
     def create_original_files_vcf_script(self, job_name="truth_vcf", job_header=None, job_index=0, file_pair_index=0,
                                          file_index=0, dependencies=[]):
         input_fastq_1 = self.path_generator.get_input_file_path(job_index, file_pair_index, 0)
-        input_fastq_2 = self.path_generator.get_input_file_path(job_index, file_pair_index, 1)
+        if len(self.config['input_file'][file_pair_index]) > 1:
+            input_fastq_2 = self.path_generator.get_input_file_path(job_index, file_pair_index, 1)
+        else:
+            input_fastq_2 = ''
         reference_file = self.path_generator.get_reference_file_path()
         sam_path = self.path_generator.get_truth_sam_path(job_index, file_pair_index, file_index)
         sorted_bam_path = self.path_generator.get_truth_sorted_bam_path(job_index, file_pair_index, file_index)
@@ -74,7 +77,7 @@ class PostHocAnalysis:
             email=email,
             output_log=output_log,
             error_log=error_log,
-            threads = nodes * ppn * 2,
+            threads = nodes * ppn,
             job_header=job_header,
             reference_file=reference_file,
             input_fastq_1=input_fastq_1,
@@ -154,7 +157,7 @@ class PostHocAnalysis:
             email=email,
             output_log=output_log,
             error_log=error_log,
-            threads=nodes * ppn * 2,
+            threads=nodes * ppn,
             job_header=job_header,
             reference_file=reference_file,
             input_fastq_1=input_fastq_1,

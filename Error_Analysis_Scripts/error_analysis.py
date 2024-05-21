@@ -14,7 +14,7 @@ from Compression_Scripts.dependency_linker import DependencyLinker
 
 
 class ErrorAnalysis:
-    def __init__(self, config_name, template_path="/home/tus53997/SeqBench/Scripts_Template/Nest_error_analysis.sh",
+    def __init__(self, config_name, template_path="/home/tus53997/SeqBench/Scripts_Template/error_analysis.sh",
                  dependency_file="/home/tus53997/SeqBench/Compression_Scripts/Logs/job_dependencies.json"):
         self.config = self.load_config(config_name)
         self.path_generator = PathGenerator(config_name)

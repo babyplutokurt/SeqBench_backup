@@ -1,30 +1,30 @@
 ----------------------------------------
-Begin Batch Job Prologue Mon May 20 13:50:01 EDT 2024
-Job ID:           72150
+Begin Batch Job Prologue Tue May 21 02:31:29 EDT 2024
+Job ID:           72281
 Username:         tus53997
 Group:            cis
 Job Name:         post_hoc_0_0_0
 Resources List:   walltime=48:00:00,nodes=1:ppn=24,neednodes=1:ppn=24
 Queue:            compute
 Account:          
-Nodes:            c06 
+Nodes:            c08 
 ----------------------------------------
-End Batch Job Prologue Mon May 20 13:50:01 EDT 2024
+End Batch Job Prologue Tue May 21 02:31:29 EDT 2024
 ----------------------------------------
-Precision: .999368
-Recall: .997151
-F1 Score: .998257
+Precision: 1.000000
+Recall: 1.000000
+F1 Score: 1.000000
 ----------------------------------------
-Begin Batch Job Epilogue Mon May 20 13:50:37 EDT 2024
-Job ID:           72150
+Begin Batch Job Epilogue Tue May 21 02:32:08 EDT 2024
+Job ID:           72281
 Username:         tus53997
 Group:            cis
 Job Name:         post_hoc_0_0_0
-Session:          83225
+Session:          170300
 Limits:           walltime=48:00:00,nodes=1:ppn=24,neednodes=1:ppn=24
-Resources:        cput=00:02:15,vmem=179264kb,walltime=00:00:36,mem=48204kb,energy_used=0
+Resources:        cput=00:02:18,vmem=19208404kb,walltime=00:00:39,mem=35616kb,energy_used=0
 Queue:            compute
 Account:          
 ----------------------------------------
-End Batch Job Epilogue Mon May 20 13:50:48 EDT 2024
+End Batch Job Epilogue Tue May 21 02:32:18 EDT 2024
 ----------------------------------------

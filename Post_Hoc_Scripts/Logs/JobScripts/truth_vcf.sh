@@ -18,17 +18,17 @@ if [ ! -f /home/tus53997/SeqBench/RefSeq/GCF_000013425.1_ASM1342v1_genomic.fna.b
 fi
 
 # Step 2: Alignment
-bwa mem -t 24 /home/tus53997/SeqBench/RefSeq/GCF_000013425.1_ASM1342v1_genomic.fna /home/tus53997/SeqBench/FASTQ/ERR103405_1.fastq /home/tus53997/SeqBench/FASTQ/ERR103405_2.fastq > /home/tus53997/work/SAM/ERR103405_1.fastq.sam
+bwa mem -t 24 /home/tus53997/SeqBench/RefSeq/GCF_000013425.1_ASM1342v1_genomic.fna /home/tus53997/SeqBench/FASTQ/ERR103405_1.fastq /home/tus53997/SeqBench/FASTQ/ERR103405_2.fastq > /home/tus53997/SeqBench/SAM/ERR103405_1.fastq.sam
 
 # Step 3: Convert SAM to BAM, sort, and index
-samtools view -bS /home/tus53997/work/SAM/ERR103405_1.fastq.sam | samtools sort -@ 24 -o /home/tus53997/work/BAM/ERR103405_1.fastq_sorted.bam
-samtools index --threads 24 /home/tus53997/work/BAM/ERR103405_1.fastq_sorted.bam
+samtools view -bS /home/tus53997/SeqBench/SAM/ERR103405_1.fastq.sam | samtools sort -@ 24 -o /home/tus53997/SeqBench/BAM/ERR103405_1.fastq_sorted.bam
+samtools index --threads 24 /home/tus53997/SeqBench/BAM/ERR103405_1.fastq_sorted.bam
 
 # Step 4: Call variants using bcftools
-bcftools mpileup --threads 24 -f /home/tus53997/SeqBench/RefSeq/GCF_000013425.1_ASM1342v1_genomic.fna /home/tus53997/work/BAM/ERR103405_1.fastq_sorted.bam | bcftools call -mv -Ov -o /home/tus53997/work/VCF/ERR103405_1.fastq.vcf
+bcftools mpileup --threads 24 -f /home/tus53997/SeqBench/RefSeq/GCF_000013425.1_ASM1342v1_genomic.fna /home/tus53997/SeqBench/BAM/ERR103405_1.fastq_sorted.bam | bcftools call -mv -Ov -o /home/tus53997/SeqBench/VCF/ERR103405_1.fastq.vcf
 
 # Step 5: Compress and index the new VCF file
-bgzip --threads 24 -c /home/tus53997/work/VCF/ERR103405_1.fastq.vcf > /home/tus53997/work/VCF/ERR103405_1.fastq.vcf.gz
-tabix --threads 24 -p vcf /home/tus53997/work/VCF/ERR103405_1.fastq.vcf.gz
+bgzip --threads 24 -c /home/tus53997/SeqBench/VCF/ERR103405_1.fastq.vcf > /home/tus53997/SeqBench/VCF/ERR103405_1.fastq.vcf.gz
+tabix --threads 24 -p vcf /home/tus53997/SeqBench/VCF/ERR103405_1.fastq.vcf.gz
 
 conda deactivate

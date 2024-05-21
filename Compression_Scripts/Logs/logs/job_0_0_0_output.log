@@ -1,27 +1,43 @@
 ----------------------------------------
-Begin Batch Job Prologue Mon May 20 13:48:58 EDT 2024
-Job ID:           72145
+Begin Batch Job Prologue Tue May 21 02:33:48 EDT 2024
+Job ID:           72283
 Username:         tus53997
 Group:            cis
 Job Name:         job_0_0_0
 Resources List:   walltime=48:00:00,nodes=1:ppn=24,neednodes=1:ppn=24
 Queue:            compute
 Account:          
-Nodes:            c06 
+Nodes:            c08 
 ----------------------------------------
-End Batch Job Prologue Mon May 20 13:48:58 EDT 2024
+End Batch Job Prologue Tue May 21 02:33:48 EDT 2024
 ----------------------------------------
+Parameters - k: 7, l: 6, b: 32 
+Starting encoding in FAST MODE with 24 threads... 
+Starting adaptative encoding for 33 (32 + 1) blocks, and update every 4 blocks... 
+Starting parallelized fast encoding...
+Total encoded blocks: 18 
+Stream <original size in bytes> -> <compressed size in bytes> (<compression ratio>)
+IDs   21226793 -> 1019246 (0.048)
+Bases 63026250 -> 14441247 (0.229)
+Quals 63026250 -> 27539481 (0.437)
+Total 171027136 -> 43001943 (0.251)
+Total compression time: 3.22 s
+Parameters - k: 7, l: 6, b: 32 
+Starting decoding with 24 threads... 
+Starting decoding with context model update... 
+Total decoded blocks: 18
+Total decompression time: 3.46 s
 ----------------------------------------
-Begin Batch Job Epilogue Mon May 20 13:49:19 EDT 2024
-Job ID:           72145
+Begin Batch Job Epilogue Tue May 21 02:34:08 EDT 2024
+Job ID:           72283
 Username:         tus53997
 Group:            cis
 Job Name:         job_0_0_0
-Session:          82401
+Session:          170946
 Limits:           walltime=48:00:00,nodes=1:ppn=24,neednodes=1:ppn=24
-Resources:        cput=00:00:16,vmem=0kb,walltime=00:00:21,mem=0kb,energy_used=0
+Resources:        cput=00:00:29,vmem=2682616kb,walltime=00:00:20,mem=530008kb,energy_used=0
 Queue:            compute
 Account:          
 ----------------------------------------
-End Batch Job Epilogue Mon May 20 13:49:29 EDT 2024
+End Batch Job Epilogue Tue May 21 02:34:18 EDT 2024
 ----------------------------------------

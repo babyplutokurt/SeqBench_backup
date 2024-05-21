@@ -8,7 +8,7 @@ from dependency_linker import DependencyLinker
 
 
 class JobGenerator:
-    def __init__(self, config_name, template_path="/home/tus53997/SeqBench/Scripts_Template/Nest.sh",
+    def __init__(self, config_name, template_path="/home/tus53997/SeqBench/Scripts_Template/Compute.sh",
                  dependency_file="/home/tus53997/SeqBench/Compression_Scripts/Logs/job_dependencies.json"):
         self.factory = CommandGeneratorFactory(config_name)
         self.config = self.factory.config
@@ -33,8 +33,14 @@ class JobGenerator:
         with open(self.template_path) as f:
             template = Template(f.read())
 
-        compression_command = commands[0]
-        decompression_command = commands[1]
+        reference_command = ''
+        if len(commands) >= 3:
+            reference_command = commands[0]
+            compression_command = commands[1]
+            decompression_command = commands[2]
+        else:
+            compression_command = commands[0]
+            decompression_command = commands[1]
         input_path = self.path_generator.get_input_file_path(job_index, file_pair_index, file_index)
         compressed_output_path = self.path_generator.get_compressed_output_path(job_index, file_pair_index, file_index)
         metrics_csv_path = self.path_generator.get_compression_metric_path(file_pair_index, file_index)
@@ -58,6 +64,7 @@ class JobGenerator:
             email=email,
             output_log=output_log,
             error_log=error_log,
+            reference_command=reference_command,
             compression_command=compression_command,
             decompression_command=decompression_command,
             input_path=input_path,

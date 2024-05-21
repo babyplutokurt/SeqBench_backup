@@ -2,7 +2,7 @@
   "project-home": "",
   "storage_dir": "/home/tus53997/work",
   "nodes": 1,
-  "ppn": 24,
+  "ppn": 28,
   "walltime": "48:00:00",
   "email": "taolue.yang@temple.edu",
   "conda_path": "/home/tus53997/miniconda3/bin/activate",

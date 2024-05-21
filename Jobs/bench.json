@@ -1,6 +1,6 @@
 {
   "project_home": "",
-  "storage_dir": "/home/tus53997/work",
+  "storage_dir": "",
   "nodes": 1,
   "ppn": 24,
   "walltime": "48:00:00",
@@ -28,6 +28,22 @@
   "reference_already": true,
   "job_type": "Compression-Decompression",
   "jobs": [
+    {
+      "name": "enano",
+      "options": [
+        "-t 24",
+        "-d -t 24"
+      ],
+      "reference_based": false
+    },
+    {
+      "name": "renano",
+      "options": [
+        "-t 24",
+        "-d -t 24"
+      ],
+      "reference_based": false
+    },
     {
       "name": "fqzcomp",
       "options": [

@@ -40,6 +40,12 @@ class PathGenerator:
         input_files = self.config[file_set][file_pair_index]
         return self.get_full_path(input_files[file_index])
 
+    def get_paf_file_path(self, job_index, file_pair_index, file_index):
+        input_file_path = self.get_input_file_path(job_index, file_pair_index, file_index)
+        input_file_name = os.path.basename(input_file_path).replace('.fastq', '') + '.paf'
+        paf_file_path = os.path.abspath(os.path.join(self.storage_dir, 'RefSeq', input_file_name))
+        return paf_file_path
+
     def get_compressed_output_path(self, job_index, file_pair_index, file_index):
         input_file_path = self.get_input_file_path(job_index, file_pair_index, file_index)
         job_name = self.config['jobs'][job_index]['name'].upper()
@@ -57,7 +63,9 @@ class PathGenerator:
         suffix_mapper = {
             "SZ3": ".sz",
             "FQZCOMP": ".fqz",
-            "SPRING": ".spring"
+            "SPRING": ".spring",
+            "RENANO": ".renano",
+            "ENANO": ".enano"
         }
         suffix = suffix_mapper.get(job_name, ".out")
         base_filename = os.path.basename(input_file_path)
@@ -239,12 +247,12 @@ class PathGenerator:
 if __name__ == "__main__":
     config_path = "/home/tus53997/SeqBench/Jobs/bench.json"  # Adjust the path as necessary
     pg = PathGenerator(config_path)
-    job_index = 0
+    job_index = 1
     file_pair_index = 0  # example file pair index
     file_index = 0  # example file index
     try:
-        print({pg.get_input_file_path(job_index, file_pair_index, file_index)})
-        # print({pg.get_sam_path(job_index, file_pair_index, file_index)})
+        print({pg.get_compressed_output_path(job_index, file_pair_index, file_index)})
+        print({pg.get_decompressed_output_path(job_index, file_pair_index, file_index)})
         # print({pg.get_sorted_bam_path(job_index, file_pair_index, file_index)})
         # print({pg.get_variant_path(job_index, file_pair_index, file_index)})
         # print({pg.get_compressed_variant_path(job_index, file_pair_index, file_index)})

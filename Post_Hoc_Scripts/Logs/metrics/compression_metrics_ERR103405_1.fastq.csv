@@ -1,2 +1,1 @@
 job_id,Compressor_Name,True_Positives(TP),False_Positives(FP),False_Negatives(FN),Precision,Recall,F1_Score
-post_hoc_0_0_0,fqzcomp_-Q_5,39555, 25, 113, .999368, .997151, .998257
