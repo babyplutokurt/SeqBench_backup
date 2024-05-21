@@ -1,11 +1,17 @@
 #!/bin/sh
 #PBS -l walltime=48:00:00
 #PBS -N post_hoc_0_0_0
+#PBS -q normal
 #PBS -l nodes=1:ppn=24
 #PBS -M taolue.yang@temple.edu
 #PBS -o /home/tus53997/SeqBench/Post_Hoc_Scripts/Logs/logs/job_0_0_0_output.log
 #PBS -e /home/tus53997/SeqBench/Post_Hoc_Scripts/Logs/logs/job_0_0_0_error.log
+<<<<<<< HEAD
 #PBS -W depend=afterok:72283:72295:72284
+=======
+
+#PBS -W depend=afterok:1889107:1889135:1889108
+>>>>>>> 1f0bd7d1b255f712c9ab85d63df20a581d9db948
 
 
 # Change to the working directory
@@ -14,11 +20,12 @@ cd $PBS_O_WORKDIR
 source /home/tus53997/miniconda3/bin/activate compression
 
 # Step 1: Index the reference fasta file (if not already indexed)
-if [ ! -f /home/tus53997/SeqBench/RefSeq/GCF_000013425.1_ASM1342v1_genomic.fna.bwt ]; then
-    bwa index /home/tus53997/SeqBench/RefSeq/GCF_000013425.1_ASM1342v1_genomic.fna
+if [ ! -f /work/tus53997/RefSeq/hg38.fa.bwt ]; then
+    bwa index /work/tus53997/RefSeq/hg38.fa
 fi
 
 # Step 2: Alignment
+<<<<<<< HEAD
 bwa mem -t 24 /home/tus53997/SeqBench/RefSeq/GCF_000013425.1_ASM1342v1_genomic.fna /home/tus53997/SeqBench/DecompressedOutput/ERR103405_1.fastq_-t_24.enano.fastq /home/tus53997/SeqBench/DecompressedOutput/ERR103405_2.fastq_-t_24.enano.fastq > /home/tus53997/SeqBench/SAM/ERR103405_1.fastq_-t_24.sam
 
 # Step 3: Convert SAM to BAM, sort, and index
@@ -39,6 +46,28 @@ bcftools isec --threads 24  -p /home/tus53997/SeqBench/VCF/comparison/0_0_0 -Oz 
 TP=$(bcftools view /home/tus53997/SeqBench/VCF/comparison/0_0_0/0002.vcf.gz | grep -v '^#' | wc -l)
 FP=$(bcftools view /home/tus53997/SeqBench/VCF/comparison/0_0_0/0001.vcf.gz | grep -v '^#' | wc -l)
 FN=$(bcftools view /home/tus53997/SeqBench/VCF/comparison/0_0_0/0000.vcf.gz | grep -v '^#' | wc -l)
+=======
+bwa mem -t 48 /work/tus53997/RefSeq/hg38.fa /work/tus53997/DecompressedOutput/HG00097_CCAAGTCT-AAGGATGA_HCLHLDSXX_L004_001.R1.fastq_-Q_1.fqz.fastq /work/tus53997/DecompressedOutput/HG00097_CCAAGTCT-AAGGATGA_HCLHLDSXX_L004_001.R2.fastq_-Q_1.fqz.fastq > /work/tus53997/SAM/HG00097_CCAAGTCT-AAGGATGA_HCLHLDSXX_L004_001.R1.fastq_-Q_1.sam
+
+# Step 3: Convert SAM to BAM, sort, and index
+samtools view -bS /work/tus53997/SAM/HG00097_CCAAGTCT-AAGGATGA_HCLHLDSXX_L004_001.R1.fastq_-Q_1.sam | samtools sort -@ 48 -o /work/tus53997/BAM/HG00097_CCAAGTCT-AAGGATGA_HCLHLDSXX_L004_001.R1.fastq_-Q_1_sorted.bam
+samtools index --threads 48 /work/tus53997/BAM/HG00097_CCAAGTCT-AAGGATGA_HCLHLDSXX_L004_001.R1.fastq_-Q_1_sorted.bam
+
+# Step 4: Call variants using bcftools
+bcftools mpileup --threads 48 -f /work/tus53997/RefSeq/hg38.fa /work/tus53997/BAM/HG00097_CCAAGTCT-AAGGATGA_HCLHLDSXX_L004_001.R1.fastq_-Q_1_sorted.bam | bcftools call -mv -Ov -o /work/tus53997/VCF/HG00097_CCAAGTCT-AAGGATGA_HCLHLDSXX_L004_001.R1.fastq_-Q_1.vcf
+
+# Step 5: Compress and index the new VCF file
+bgzip --threads 48 -c /work/tus53997/VCF/HG00097_CCAAGTCT-AAGGATGA_HCLHLDSXX_L004_001.R1.fastq_-Q_1.vcf > /work/tus53997/VCF/HG00097_CCAAGTCT-AAGGATGA_HCLHLDSXX_L004_001.R1.fastq_-Q_1.vcf.gz
+tabix --threads 48 -p vcf /work/tus53997/VCF/HG00097_CCAAGTCT-AAGGATGA_HCLHLDSXX_L004_001.R1.fastq_-Q_1.vcf.gz
+
+# Step 6: Compare the new VCF file with the original VCF file
+bcftools isec --threads 48  -p /work/tus53997/VCF/comparison/0_0_0 -Oz /work/tus53997/VCF/HG00097_CCAAGTCT-AAGGATGA_HCLHLDSXX_L004_001.R1.fastq.vcf.gz /work/tus53997/VCF/HG00097_CCAAGTCT-AAGGATGA_HCLHLDSXX_L004_001.R1.fastq_-Q_1.vcf.gz
+
+# Step 7: Calculate precision, recall, and F1 score
+TP=$(bcftools view /work/tus53997/VCF/comparison/0_0_0/0002.vcf.gz | grep -v '^#' | wc -l)
+FP=$(bcftools view /work/tus53997/VCF/comparison/0_0_0/0001.vcf.gz | grep -v '^#' | wc -l)
+FN=$(bcftools view /work/tus53997/VCF/comparison/0_0_0/0000.vcf.gz | grep -v '^#' | wc -l)
+>>>>>>> 1f0bd7d1b255f712c9ab85d63df20a581d9db948
 
 precision=$(echo "scale=6; $TP / ($TP + $FP)" | bc)
 recall=$(echo "scale=6; $TP / ($TP + $FN)" | bc)
@@ -49,7 +78,11 @@ echo "Recall: $recall"
 echo "F1 Score: $f1_score"
 
 
+<<<<<<< HEAD
 echo "post_hoc_0_0_0,enano_-t_24,$TP, $FP, $FN, $precision, $recall, $f1_score" >> "/home/tus53997/SeqBench/Post_Hoc_Scripts/Logs/metrics/compression_metrics_ERR103405_1.fastq.csv"
+=======
+echo "post_hoc_0_0_0,fqzcomp_-Q_1,$TP, $FP, $FN, $precision, $recall, $f1_score" >> "/home/tus53997/SeqBench/Post_Hoc_Scripts/Logs/metrics/compression_metrics_HG00097_CCAAGTCT-AAGGATGA_HCLHLDSXX_L004_001.R1.fastq.csv"
+>>>>>>> 1f0bd7d1b255f712c9ab85d63df20a581d9db948
 
 # Deactivate the conda environment
 conda deactivate

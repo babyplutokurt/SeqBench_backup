@@ -1,4 +1,14 @@
 job_id,Compressor_Name,MSE_v3,PSNR_v3
+<<<<<<< HEAD
 error_analysis_0_0_1,enano_-t_24,0.0,inf
 error_analysis_0_1_1,renano_-t_24,0.0,inf
 error_analysis_0_2_1,fqzcomp_-Q_5,12.688200718372357,21.00719942396139
+=======
+error_analysis_0_0_1,fqzcomp_-Q_1,0.7190138037722378,33.473827545198205
+error_analysis_0_2_1,fqzcomp_-Q_5,12.688200718372357,21.00719942396139
+error_analysis_0_3_1,fqzcomp_-Q_8,31.01545761008101,17.125417894145905
+error_analysis_0_1_1,fqzcomp_-Q_2,2.4974622102945827,28.066210571231505
+error_analysis_0_4_1,fqzcomp_-Q_10,50.124540119561715,15.040695815554246
+error_analysis_0_5_1,fqzcomp_-Q_15,127.83406314098448,10.974733896861729
+error_analysis_0_6_1,fqzcomp_-Q_20,257.5029298099476,7.933378079464637
+>>>>>>> 1f0bd7d1b255f712c9ab85d63df20a581d9db948

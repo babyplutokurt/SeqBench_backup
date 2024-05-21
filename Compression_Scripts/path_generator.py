@@ -168,7 +168,7 @@ class PathGenerator:
     def get_truth_vcf_script_path(self, job_index, file_pair_index, file_index):
         scripts_dir = os.path.join(self.project_base_dir, 'Post_Hoc_Scripts/Logs/JobScripts')
         os.makedirs(scripts_dir, exist_ok=True)
-        return os.path.join(scripts_dir, f"truth_vcf.sh")
+        return os.path.join(scripts_dir, f"truth_vcf_{file_pair_index}.sh")
 
     def get_lossy_vcf_script_path(self, job_index, file_pair_index, file_index):
         scripts_dir = os.path.join(self.project_base_dir, 'Post_Hoc_Scripts/Logs/JobScripts')
