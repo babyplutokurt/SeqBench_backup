@@ -14,11 +14,20 @@
 [M::mem_pestat] low and high boundaries for proper pairs: (1, 4801)
 [M::mem_pestat] skip orientation RR as there are not enough pairs
 [M::mem_pestat] skip orientation RF
-[M::mem_process_seqs] Processed 840350 reads in 87.268 CPU sec, 3.873 real sec
+[M::mem_process_seqs] Processed 840350 reads in 90.113 CPU sec, 4.142 real sec
 [main] Version: 0.7.18-r1243-dirty
-[main] CMD: bwa mem -t 24 /home/tus53997/SeqBench/RefSeq/GCF_000013425.1_ASM1342v1_genomic.fna /home/tus53997/SeqBench/DecompressedOutput/ERR103405_1.fastq_-t_24.renano.fastq /home/tus53997/SeqBench/DecompressedOutput/ERR103405_2.fastq_-t_24.renano.fastq
-[main] Real time: 6.100 sec; CPU: 89.031 sec
+[main] CMD: bwa mem -t 24 /home/tus53997/SeqBench/RefSeq/GCF_000013425.1_ASM1342v1_genomic.fna /home/tus53997/SeqBench/DecompressedOutput/ERR103405_1.fastq_-t_24.enano.fastq /home/tus53997/SeqBench/DecompressedOutput/ERR103405_2.fastq_-t_24.enano.fastq
+[main] Real time: 7.009 sec; CPU: 91.811 sec
+[W::sam_read1_sam] Parse error at line 843615
+samtools view: error reading file "/home/tus53997/SeqBench/SAM/ERR103405_1.fastq_-t_24.sam"
 [bam_sort_core] merging from 0 files and 24 in-memory blocks...
-[mpileup] 1 samples in 1 input files
+[W::bam_hdr_read] EOF marker is absent. The input is probably truncated
+[E::bgzf_read] Read block operation failed with error 4 after 0 of 4 bytes
+samtools index: failed to create index for "/home/tus53997/SeqBench/BAM/ERR103405_1.fastq_-t_24_sorted.bam"
 Note: none of --samples-file, --ploidy or --ploidy-file given, assuming all sites are diploid
+[W::bam_hdr_read] EOF marker is absent. The input is probably truncated
+[mpileup] 1 samples in 1 input files
 [mpileup] maximum number of reads per input file set to -d 250
+[E::bgzf_read_block] Failed to read BGZF header at offset 89218416
+[E::bgzf_read] Read block operation failed with error 2 after 0 of 4 bytes
+[tabix] the index file exists. Please use '-f' to overwrite.

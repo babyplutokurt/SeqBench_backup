@@ -1,1 +1,4 @@
 job_id,Compressor_Name,True_Positives(TP),False_Positives(FP),False_Negatives(FN),Precision,Recall,F1_Score
+post_hoc_0_2_0,fqzcomp_-Q_5,39555, 25, 113, .999368, .997151, .998257
+post_hoc_0_1_0,renano_-t_24,39668, 0, 0, 1.000000, 1.000000, 1.000000
+post_hoc_0_0_0,enano_-t_24,39668, 0, 0, 1.000000, 1.000000, 1.000000

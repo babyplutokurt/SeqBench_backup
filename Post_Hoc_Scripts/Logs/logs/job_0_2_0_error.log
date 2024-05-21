@@ -1,10 +1,24 @@
 [M::bwa_idx_load_from_disk] read 0 ALT contigs
+[M::process] read 840350 sequences (126892850 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (2, 350207, 159, 2)
+[M::mem_pestat] skip orientation FF as there are not enough pairs
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (194, 274, 368)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 716)
+[M::mem_pestat] mean and std.dev: (286.22, 128.65)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 890)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (461, 918, 1546)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 3716)
+[M::mem_pestat] mean and std.dev: (952.19, 815.02)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 4801)
+[M::mem_pestat] skip orientation RR as there are not enough pairs
+[M::mem_pestat] skip orientation RF
+[M::mem_process_seqs] Processed 840350 reads in 89.317 CPU sec, 4.110 real sec
 [main] Version: 0.7.18-r1243-dirty
-[main] CMD: bwa mem -t 24 /home/tus53997/SeqBench/RefSeq/yst_genome.fna /home/tus53997/SeqBench/DecompressedOutput/ERR1539081.fastq_-Q_5.fqz.fastq /home/tus53997/SeqBench/DecompressedOutput/ERR1539082.fastq_-Q_5.fqz.fastq
-[main] Real time: 0.021 sec; CPU: 0.020 sec
+[main] CMD: bwa mem -t 24 /home/tus53997/SeqBench/RefSeq/GCF_000013425.1_ASM1342v1_genomic.fna /home/tus53997/SeqBench/DecompressedOutput/ERR103405_1.fastq_-Q_5.fqz.fastq /home/tus53997/SeqBench/DecompressedOutput/ERR103405_2.fastq_-Q_5.fqz.fastq
+[main] Real time: 6.873 sec; CPU: 90.920 sec
+[bam_sort_core] merging from 0 files and 24 in-memory blocks...
 Note: none of --samples-file, --ploidy or --ploidy-file given, assuming all sites are diploid
 [mpileup] 1 samples in 1 input files
 [mpileup] maximum number of reads per input file set to -d 250
-Runtime error (func=(main), adr=11): Divide by zero
-Runtime error (func=(main), adr=11): Divide by zero
-(standard_in) 1: syntax error
