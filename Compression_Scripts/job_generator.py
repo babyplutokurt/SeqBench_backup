@@ -8,7 +8,7 @@ from dependency_linker import DependencyLinker
 
 
 class JobGenerator:
-    def __init__(self, config_name, template_path="/home/tus53997/SeqBench/Scripts_Template/Compute.sh",
+    def __init__(self, config_name, template_path="/home/tus53997/SeqBench/Scripts_Template/Nest.sh",
                  dependency_file="/home/tus53997/SeqBench/Compression_Scripts/Logs/job_dependencies.json"):
         self.factory = CommandGeneratorFactory(config_name)
         self.config = self.factory.config

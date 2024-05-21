@@ -1,0 +1,5 @@
+job_id,Compressor_Name,True_Positives(TP),False_Positives(FP),False_Negatives(FN),Precision,Recall,F1_Score
+post_hoc_3_0_0,fqzcomp_-Q_5,0, 0, 0, , , 
+post_hoc_3_3_0,spring_-c_-l_-q_qvz_1,0, 0, 0, , , 
+post_hoc_3_2_0,enano_-t_28,0, 0, 0, , , 
+post_hoc_3_1_0,renano_-t_28,0, 0, 0, , , 

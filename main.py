@@ -8,7 +8,7 @@ from Post_Hoc_Scripts.post_hoc_analysis import PostHocAnalysis
 from Error_Analysis_Scripts.error_analysis import ErrorAnalysis
 
 if __name__ == '__main__':
-    config = '/home/tus53997/SeqBench/Jobs/bench2.json'
+    config = '/home/tus53997/SeqBench/Jobs/bench_HG0097.json'
     jb = JobGenerator(config)
     jb.generate_and_submit_jobs()
     ea = ErrorAnalysis(config)

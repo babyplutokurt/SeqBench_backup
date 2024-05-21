@@ -1,0 +1,5 @@
+job_id_compression,Compressor_Name,Compression_Time,Decompression_Time,Ratio
+job_3_0_0,fqzcomp_-Q_5,0,0,443397695.250000
+job_3_1_0,renano_-t_28,16,19,3.133709
+job_3_2_0,enano_-t_28,15,18,3.135348
+job_3_3_0,spring_-c_-l_-q_qvz_1,66,0,

@@ -1,0 +1,5 @@
+job_id,Compressor_Name,MSE_v3,PSNR_v3
+error_analysis_2_0_0,fqzcomp_-Q_5,nan,nan
+error_analysis_2_1_0,renano_-t_28,0.0,inf
+error_analysis_2_2_0,enano_-t_28,0.0,inf
+error_analysis_2_3_0,spring_-c_-l_-q_qvz_1,,
