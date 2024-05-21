@@ -1,31 +1,31 @@
 ----------------------------------------
-Begin Batch Job Prologue Mon May 20 14:43:01 EDT 2024
-Job ID:           1888951
+Begin Batch Job Prologue Mon May 20 19:26:42 EDT 2024
+Job ID:           1889141
 Username:         tus53997
 Group:            cis
 Job Name:         post_hoc_0_5_0
 Resources List:   walltime=48:00:00,nodes=1:ppn=24,neednodes=1:ppn=24
 Queue:            normal
 Account:          
-Nodes:            b086 
+Nodes:            b066 
 ----------------------------------------
-End Batch Job Prologue Mon May 20 14:43:02 EDT 2024
+End Batch Job Prologue Mon May 20 19:26:43 EDT 2024
 ----------------------------------------
-Precision: .998720
-Recall: .983916
-F1 Score: .991262
+Precision: .996529
+Recall: .743704
+F1 Score: .851750
 ----------------------------------------
-Begin Batch Job Epilogue Mon May 20 14:43:38 EDT 2024
-Job ID:           1888951
+Begin Batch Job Epilogue Mon May 20 21:35:12 EDT 2024
+Job ID:           1889141
 Username:         tus53997
 Group:            cis
 Job Name:         post_hoc_0_5_0
-Session:          19486
+Session:          24847
 Limits:           walltime=48:00:00,nodes=1:ppn=24,neednodes=1:ppn=24
-Resources:        cput=00:02:05,vmem=78048kb,walltime=00:00:37,mem=4736kb,energy_used=0
+Resources:        cput=12:53:54,vmem=44559488kb,walltime=02:08:30,mem=27793868kb,energy_used=0
 Queue:            normal
 Account:          
 Deleting /dev/shm/*...
 ----------------------------------------
-End Batch Job Epilogue Mon May 20 14:43:59 EDT 2024
+End Batch Job Epilogue Mon May 20 21:35:32 EDT 2024
 ----------------------------------------

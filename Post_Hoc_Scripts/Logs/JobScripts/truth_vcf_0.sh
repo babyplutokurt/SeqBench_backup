@@ -15,22 +15,22 @@ cd $PBS_O_WORKDIR
 source /home/tus53997/miniconda3/bin/activate compression
 
 # Step 1: Index the reference fasta file (if not already indexed)
-if [ ! -f /home/tus53997/work/work/RefSeq/GCF_000013425.1_ASM1342v1_genomic.fna.bwt ]; then
-    bwa index /home/tus53997/work/work/RefSeq/GCF_000013425.1_ASM1342v1_genomic.fna
+if [ ! -f /work/tus53997/RefSeq/hg38.fa.bwt ]; then
+    bwa index /work/tus53997/RefSeq/hg38.fa
 fi
 
 # Step 2: Alignment
-bwa mem -t 48 /home/tus53997/work/work/RefSeq/GCF_000013425.1_ASM1342v1_genomic.fna /home/tus53997/work/work/FASTQ/ERR103405_1.fastq /home/tus53997/work/work/FASTQ/ERR103405_2.fastq > /home/tus53997/work/work/SAM/ERR103405_1.fastq.sam
+bwa mem -t 48 /work/tus53997/RefSeq/hg38.fa /work/tus53997/FASTQ/HG00097_CCAAGTCT-AAGGATGA_HCLHLDSXX_L004_001.R1.fastq /work/tus53997/FASTQ/HG00097_CCAAGTCT-AAGGATGA_HCLHLDSXX_L004_001.R2.fastq > /work/tus53997/SAM/HG00097_CCAAGTCT-AAGGATGA_HCLHLDSXX_L004_001.R1.fastq.sam
 
 # Step 3: Convert SAM to BAM, sort, and index
-samtools view -bS /home/tus53997/work/work/SAM/ERR103405_1.fastq.sam | samtools sort -@ 48 -o /home/tus53997/work/work/BAM/ERR103405_1.fastq_sorted.bam
-samtools index --threads 48 /home/tus53997/work/work/BAM/ERR103405_1.fastq_sorted.bam
+samtools view -bS /work/tus53997/SAM/HG00097_CCAAGTCT-AAGGATGA_HCLHLDSXX_L004_001.R1.fastq.sam | samtools sort -@ 48 -o /work/tus53997/BAM/HG00097_CCAAGTCT-AAGGATGA_HCLHLDSXX_L004_001.R1.fastq_sorted.bam
+samtools index --threads 48 /work/tus53997/BAM/HG00097_CCAAGTCT-AAGGATGA_HCLHLDSXX_L004_001.R1.fastq_sorted.bam
 
 # Step 4: Call variants using bcftools
-bcftools mpileup --threads 48 -f /home/tus53997/work/work/RefSeq/GCF_000013425.1_ASM1342v1_genomic.fna /home/tus53997/work/work/BAM/ERR103405_1.fastq_sorted.bam | bcftools call -mv -Ov -o /home/tus53997/work/work/VCF/ERR103405_1.fastq.vcf
+bcftools mpileup --threads 48 -f /work/tus53997/RefSeq/hg38.fa /work/tus53997/BAM/HG00097_CCAAGTCT-AAGGATGA_HCLHLDSXX_L004_001.R1.fastq_sorted.bam | bcftools call -mv -Ov -o /work/tus53997/VCF/HG00097_CCAAGTCT-AAGGATGA_HCLHLDSXX_L004_001.R1.fastq.vcf
 
 # Step 5: Compress and index the new VCF file
-bgzip --threads 48 -c /home/tus53997/work/work/VCF/ERR103405_1.fastq.vcf > /home/tus53997/work/work/VCF/ERR103405_1.fastq.vcf.gz
-tabix --threads 48 -p vcf /home/tus53997/work/work/VCF/ERR103405_1.fastq.vcf.gz
+bgzip --threads 48 -c /work/tus53997/VCF/HG00097_CCAAGTCT-AAGGATGA_HCLHLDSXX_L004_001.R1.fastq.vcf > /work/tus53997/VCF/HG00097_CCAAGTCT-AAGGATGA_HCLHLDSXX_L004_001.R1.fastq.vcf.gz
+tabix --threads 48 -p vcf /work/tus53997/VCF/HG00097_CCAAGTCT-AAGGATGA_HCLHLDSXX_L004_001.R1.fastq.vcf.gz
 
 conda deactivate
