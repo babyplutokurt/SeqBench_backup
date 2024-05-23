@@ -31,20 +31,6 @@
     {
       "name": "fqzcomp",
       "options": [
-        "-Q 1",
-        "-d"
-      ]
-    },
-    {
-      "name": "fqzcomp",
-      "options": [
-        "-Q 2",
-        "-d"
-      ]
-    },
-    {
-      "name": "fqzcomp",
-      "options": [
         "-Q 5",
         "-d"
       ]
@@ -75,6 +61,55 @@
       "options": [
         "-Q 20",
         "-d"
+      ]
+    },
+    {
+      "name": "spring",
+      "options": [
+        "-c -l -q qvz 1",
+        "-d"
+      ]
+    },
+    {
+      "name": "spring",
+      "options": [
+        "-c -l -q qvz 0.8",
+        "-d"
+      ]
+    },
+    {
+      "name": "spring",
+      "options": [
+        "-c -l -q qvz 0.6",
+        "-d"
+      ]
+    },
+    {
+      "name": "spring",
+      "options": [
+        "-c -l -q qvz 0.4",
+        "-d"
+      ]
+    },
+    {
+      "name": "spring",
+      "options": [
+        "-c -l -q ill_bin",
+        "-d"
+      ]
+    },
+    {
+      "name": "renano",
+      "options": [
+        "-t 28",
+        "-d -t 28"
+      ]
+    },
+    {
+      "name": "enano",
+      "options": [
+        "-t 28",
+        "-d -t 28"
       ]
     }
   ]

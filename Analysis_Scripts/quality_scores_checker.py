@@ -18,6 +18,6 @@ def extract_quality_scores(fastq_file, num_lines=100000):
 
 
 if __name__ == "__main__":
-    fastq_file = "/home/tus53997/SeqBench/FASTQ/HG00097_CCAAGTCT-AAGGATGA_HCLHLDSXX_L004_001.R1_1000000.fastq"
+    fastq_file = "/work/tus53997/FASTQ/ERR016162_1.fastq"
     quality_scores = extract_quality_scores(fastq_file)
     print("Individual Quality Scores Count:", len(quality_scores))

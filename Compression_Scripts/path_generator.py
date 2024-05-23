@@ -190,7 +190,7 @@ class PathGenerator:
         input_files = self.config['input_file'][file_pair_index]
         input_file_path = self.get_full_path(input_files[0])
         base_filename = os.path.basename(input_file_path)
-        metrics_filename = f"compression_metrics_{base_filename}.csv"
+        metrics_filename = f"post_hoc_metrics_{base_filename}.csv"
         metrics_dir = os.path.abspath(os.path.join(self.project_base_dir, 'Post_Hoc_Scripts', 'Logs', 'metrics'))
         os.makedirs(metrics_dir, exist_ok=True)
         return os.path.join(metrics_dir, metrics_filename)

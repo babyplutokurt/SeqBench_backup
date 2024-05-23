@@ -1,0 +1,46 @@
+----------------------------------------
+Begin Batch Job Prologue Thu May 23 03:48:14 EDT 2024
+Job ID:           1893787
+Username:         tus53997
+Group:            cis
+Job Name:         job_0_10_0
+Resources List:   walltime=48:00:00,nodes=1:ppn=28,neednodes=1:ppn=28
+Queue:            normal
+Account:          
+Nodes:            b134 
+----------------------------------------
+End Batch Job Prologue Thu May 23 03:48:15 EDT 2024
+----------------------------------------
+Basecall stream not aligned. 
+Parameters - k: 7, l: 6, b: 32 
+Starting adaptative encoding with 28 threads, for 33 (32 + 1) blocks, and update every 4 blocks... 
+Starting parallelized fast encoding...
+Total encoded blocks: 964 
+Stream <original size in bytes> -> <compressed size in bytes> (<compression ratio>)
+IDs   1536331936 -> 201089255 (0.131)
+Bases 3942434430 -> 926112516 (0.235)
+Quals 3942434430 -> 729842336 (0.185)
+Total 9636242674 -> 1857160357 (0.193)
+Total time: 30.05 s
+Parameters - k: 7, l: 6, b: 32 
+Basecall stream not aligned. 
+Starting decoding with 28 threads... 
+Starting decoding with context model update... 
+Starting parallelized fast decoding... 
+Total decoded blocks: 964
+Total time: 36.78 s
+----------------------------------------
+Begin Batch Job Epilogue Thu May 23 03:49:35 EDT 2024
+Job ID:           1893787
+Username:         tus53997
+Group:            cis
+Job Name:         job_0_10_0
+Session:          16246
+Limits:           walltime=48:00:00,nodes=1:ppn=28,neednodes=1:ppn=28
+Resources:        cput=00:16:31,vmem=25764kb,walltime=00:01:21,mem=3448kb,energy_used=0
+Queue:            normal
+Account:          
+Deleting /dev/shm/*...
+----------------------------------------
+End Batch Job Epilogue Thu May 23 03:49:55 EDT 2024
+----------------------------------------

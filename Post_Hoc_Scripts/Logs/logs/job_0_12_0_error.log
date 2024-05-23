@@ -1,0 +1,24 @@
+[M::bwa_idx_load_from_disk] read 0 ALT contigs
+[M::process] read 500000 sequences (75000000 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (6, 212337, 64, 2)
+[M::mem_pestat] skip orientation FF as there are not enough pairs
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (369, 430, 502)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (103, 768)
+[M::mem_pestat] mean and std.dev: (438.60, 98.07)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 901)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (23, 48, 89)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 221)
+[M::mem_pestat] mean and std.dev: (58.15, 47.51)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 287)
+[M::mem_pestat] skip orientation RR as there are not enough pairs
+[M::mem_pestat] skip orientation RF
+[M::mem_process_seqs] Processed 500000 reads in 260.397 CPU sec, 9.543 real sec
+[main] Version: 0.7.18-r1243-dirty
+[main] CMD: bwa mem -t 28 /work/tus53997/RefSeq/hg38.fa /work/tus53997/DecompressedOutput/HG00097_CCAAGTCT-AAGGATGA_HCLHLDSXX_L004_001.R1_1000000.fastq_-t_28.enano.fastq /work/tus53997/DecompressedOutput/HG00097_CCAAGTCT-AAGGATGA_HCLHLDSXX_L004_001.R2_1000000.fastq_-t_28.enano.fastq
+[main] Real time: 13.775 sec; CPU: 264.462 sec
+[bam_sort_core] merging from 0 files and 28 in-memory blocks...
+Note: none of --samples-file, --ploidy or --ploidy-file given, assuming all sites are diploid
+[mpileup] 1 samples in 1 input files
+[mpileup] maximum number of reads per input file set to -d 250

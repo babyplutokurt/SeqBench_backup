@@ -1,0 +1,28 @@
+----------------------------------------
+Begin Batch Job Prologue Thu May 23 04:14:58 EDT 2024
+Job ID:           1893815
+Username:         tus53997
+Group:            cis
+Job Name:         truth_vcf
+Resources List:   walltime=48:00:00,nodes=1:ppn=28,neednodes=1:ppn=28
+Queue:            normal
+Account:          
+Nodes:            b134 
+----------------------------------------
+End Batch Job Prologue Thu May 23 04:14:59 EDT 2024
+----------------------------------------
+----------------------------------------
+Begin Batch Job Epilogue Thu May 23 06:02:03 EDT 2024
+Job ID:           1893815
+Username:         tus53997
+Group:            cis
+Job Name:         truth_vcf
+Session:          21106
+Limits:           walltime=48:00:00,nodes=1:ppn=28,neednodes=1:ppn=28
+Resources:        cput=10:59:34,vmem=27710828kb,walltime=01:47:04,mem=22585060kb,energy_used=0
+Queue:            normal
+Account:          
+Deleting /dev/shm/*...
+----------------------------------------
+End Batch Job Epilogue Thu May 23 06:02:23 EDT 2024
+----------------------------------------

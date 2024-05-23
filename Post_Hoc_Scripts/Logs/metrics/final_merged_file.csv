@@ -1,0 +1,2 @@
+job_id_x,Compressor_Name,Compression_Time,Decompression_Time,Ratio,job_id_y,MSE_v3,PSNR_v3,True_Positives(TP),False_Positives(FP),False_Negatives(FN),Precision,Recall,F1_Score
+job_0_0_0,spring_-c_-l_-q_qvz_0.6,145,1,8.010247,error_analysis_0_0_0,5.2779804,24.816522095395428,64880,30181,783,0.682509,0.988075,0.807346

@@ -1,8 +1,2 @@
 job_id,Compressor_Name,MSE_v3,PSNR_v3
-error_analysis_0_0_0,fqzcomp_-Q_1,1.00004576,32.0410010979512
-error_analysis_0_1_0,fqzcomp_-Q_2,4.0,26.020599913279625
-error_analysis_0_2_0,fqzcomp_-Q_5,24.99967968,18.061855385478736
-error_analysis_0_3_0,fqzcomp_-Q_8,61.87658752,14.125936282119726
-error_analysis_0_4_0,fqzcomp_-Q_10,92.95148874666667,12.358636326654413
-error_analysis_0_5_0,fqzcomp_-Q_15,209.23913384,8.83477069089128
-error_analysis_0_6_0,fqzcomp_-Q_20,374.0001409066667,6.312482168325134
+error_analysis_0_0_0,spring_-c_-l_-q_qvz_0.6,5.2779804,24.816522095395428

@@ -1,0 +1,55 @@
+----------------------------------------
+Begin Batch Job Prologue Thu May 23 03:48:09 EDT 2024
+Job ID:           1893785
+Username:         tus53997
+Group:            cis
+Job Name:         job_0_9_0
+Resources List:   walltime=48:00:00,nodes=1:ppn=28,neednodes=1:ppn=28
+Queue:            normal
+Account:          
+Nodes:            b114 
+----------------------------------------
+End Batch Job Prologue Thu May 23 03:48:09 EDT 2024
+----------------------------------------
+Temporary directory: ./tmp.7U20o0J90x/
+Long flag detected.
+Starting compression...
+Preprocessing ...
+Max Read length: 110
+Total number of reads: 35840313
+Preprocessing done!
+Time for this step: 190 s
+Temporary directory size: 1256801925
+
+Sizes of streams after compression: 
+Reads:         941758350 bytes
+Quality:       247578946 bytes
+ID:             67464629 bytes
+Creating tar archive ...Tar archive done!
+Time for this step: 227 s
+Compression done!
+Total time for compression: 433 s
+
+Total size:   1268029440 bytes
+Temporary directory: ./tmp.7U20o0J90x/
+Starting decompression...
+Untarring tar archive ...
+Untarring archive done!
+Decompressing ...
+Decompression done!
+Total time for decompression: 214 s
+----------------------------------------
+Begin Batch Job Epilogue Thu May 23 03:59:30 EDT 2024
+Job ID:           1893785
+Username:         tus53997
+Group:            cis
+Job Name:         job_0_9_0
+Session:          12134
+Limits:           walltime=48:00:00,nodes=1:ppn=28,neednodes=1:ppn=28
+Resources:        cput=00:29:23,vmem=566716kb,walltime=00:11:21,mem=157604kb,energy_used=0
+Queue:            normal
+Account:          
+Deleting /dev/shm/*...
+----------------------------------------
+End Batch Job Epilogue Thu May 23 03:59:52 EDT 2024
+----------------------------------------

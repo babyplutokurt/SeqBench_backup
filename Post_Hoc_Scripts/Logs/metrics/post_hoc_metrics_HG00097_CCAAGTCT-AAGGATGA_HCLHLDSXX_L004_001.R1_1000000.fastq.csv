@@ -1,0 +1,2 @@
+job_id,Compressor_Name,True_Positives(TP),False_Positives(FP),False_Negatives(FN),Precision,Recall,F1_Score
+post_hoc_0_0_0,spring_-c_-l_-q_qvz_0.6,64880, 30181, 783, .682509, .988075, .807346

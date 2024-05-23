@@ -1,0 +1,14 @@
+[M::bwa_idx_load_from_disk] read 0 ALT contigs
+[E::main_mem] fail to open file `/work/tus53997/DecompressedOutput/ERR016162_1.fastq_-c_-l_-q_qvz_1.spring.fastq'.
+[main_samview] fail to read the header from "/work/tus53997/SAM/ERR016162_1.fastq_-c_-l_-q_qvz_1.sam".
+[W::hts_set_opt] Cannot change block size for this format
+samtools sort: failed to read header from "-"
+[E::hts_open_format] Failed to open file "/work/tus53997/BAM/ERR016162_1.fastq_-c_-l_-q_qvz_1_sorted.bam" : No such file or directory
+samtools index: failed to open "/work/tus53997/BAM/ERR016162_1.fastq_-c_-l_-q_qvz_1_sorted.bam": No such file or directory
+Note: none of --samples-file, --ploidy or --ploidy-file given, assuming all sites are diploid
+[E::hts_open_format] Failed to open file "/work/tus53997/BAM/ERR016162_1.fastq_-c_-l_-q_qvz_1_sorted.bam" : No such file or directory
+[mpileup] failed to open /work/tus53997/BAM/ERR016162_1.fastq_-c_-l_-q_qvz_1_sorted.bam: No such file or directory
+Failed to read from standard input: unknown file type
+[bgzip] No such file or directory: /work/tus53997/VCF/ERR016162_1.fastq_-c_-l_-q_qvz_1.vcf
+[tabix] the compression of '/work/tus53997/VCF/ERR016162_1.fastq_-c_-l_-q_qvz_1.vcf.gz' is not BGZF
+Failed to open /work/tus53997/VCF/ERR016162_1.fastq_-c_-l_-q_qvz_1.vcf.gz: unknown file type

@@ -1,0 +1,145 @@
+----------------------------------------
+Begin Batch Job Prologue Thu May 23 03:48:07 EDT 2024
+Job ID:           1893784
+Username:         tus53997
+Group:            cis
+Job Name:         job_0_8_1
+Resources List:   walltime=48:00:00,nodes=1:ppn=28,neednodes=1:ppn=28
+Queue:            normal
+Account:          
+Nodes:            b118 
+----------------------------------------
+End Batch Job Prologue Thu May 23 03:48:08 EDT 2024
+----------------------------------------
+Temporary directory: ./tmp.IhMFSv8kP0/
+Long flag detected.
+Starting compression...
+Preprocessing ...
+Max Read length: 92
+Total number of reads: 35840313
+Preprocessing done!
+Time for this step: 8719 s
+Temporary directory size: 885243159
+
+Sizes of streams after compression: 
+Reads:         788127278 bytes
+Quality:        29651253 bytes
+ID:             67464628 bytes
+Creating tar archive ...Program terminated unexpectedly with error: Error occurred during tar archive generation.
+Deleting temporary directory...
+Allowed options:
+  -h [ --help ]                   produce help message
+  -c [ --compress ]               compress
+  -d [ --decompress ]             decompress
+  --decompress-range arg          --decompress-range start end
+                                  (optional) decompress only reads (or read 
+                                  pairs for PE datasets) from start to end 
+                                  (both inclusive) (1 <= start <= end <= 
+                                  num_reads (or num_read_pairs for PE)). If -r 
+                                  was specified during compression, the range 
+                                  of reads does not correspond to the original 
+                                  order of reads in the FASTQ file.
+  -i [ --input-file ] arg         input file name (two files for paired end)
+  -o [ --output-file ] arg        output file name (for paired end 
+                                  decompression, if only one file is specified,
+                                  two output files will be created by suffixing
+                                  .1 and .2.)
+  -w [ --working-dir ] arg (=.)   directory to create temporary files (default 
+                                  current directory)
+  -t [ --num-threads ] arg (=8)   number of threads (default 8)
+  -r [ --allow-read-reordering ]  do not retain read order during compression 
+                                  (paired reads still remain paired)
+  --no-quality                    do not retain quality values during 
+                                  compression
+  --no-ids                        do not retain read identifiers during 
+                                  compression
+  -q [ --quality-opts ] arg       quality mode: possible modes are
+                                  1. -q lossless (default)
+                                  2. -q qvz qv_ratio (QVZ lossy compression, 
+                                  parameter qv_ratio roughly corresponds to 
+                                  bits used per quality value)
+                                  3. -q ill_bin (Illumina 8-level binning)
+                                  4. -q binary thr high low (binary (2-level) 
+                                  thresholding, quality binned to high if >= 
+                                  thr and to low if < thr)
+  -l [ --long ]                   Use for compression of arbitrarily long read 
+                                  lengths. Can also provide better compression 
+                                  for reads with significant number of indels. 
+                                  -r disabled in this mode. For Illumina short 
+                                  reads, compression is better without -l flag.
+  -g [ --gzipped-fastq ]          enable if compression input is gzipped fastq 
+                                  or to output gzipped fastq during 
+                                  decompression
+  --gzip-level arg (=6)           gzip level (0-9) to use during decompression 
+                                  if -g flag is specified (default: 6)
+  --fasta-input                   enable if compression input is fasta file 
+                                  (i.e., no qualities)
+
+Temporary directory: ./tmp.IhMFSv8kP0/
+Starting decompression...
+Untarring tar archive ...
+Program terminated unexpectedly with error: Error occurred during untarring.
+Deleting temporary directory...
+Allowed options:
+  -h [ --help ]                   produce help message
+  -c [ --compress ]               compress
+  -d [ --decompress ]             decompress
+  --decompress-range arg          --decompress-range start end
+                                  (optional) decompress only reads (or read 
+                                  pairs for PE datasets) from start to end 
+                                  (both inclusive) (1 <= start <= end <= 
+                                  num_reads (or num_read_pairs for PE)). If -r 
+                                  was specified during compression, the range 
+                                  of reads does not correspond to the original 
+                                  order of reads in the FASTQ file.
+  -i [ --input-file ] arg         input file name (two files for paired end)
+  -o [ --output-file ] arg        output file name (for paired end 
+                                  decompression, if only one file is specified,
+                                  two output files will be created by suffixing
+                                  .1 and .2.)
+  -w [ --working-dir ] arg (=.)   directory to create temporary files (default 
+                                  current directory)
+  -t [ --num-threads ] arg (=8)   number of threads (default 8)
+  -r [ --allow-read-reordering ]  do not retain read order during compression 
+                                  (paired reads still remain paired)
+  --no-quality                    do not retain quality values during 
+                                  compression
+  --no-ids                        do not retain read identifiers during 
+                                  compression
+  -q [ --quality-opts ] arg       quality mode: possible modes are
+                                  1. -q lossless (default)
+                                  2. -q qvz qv_ratio (QVZ lossy compression, 
+                                  parameter qv_ratio roughly corresponds to 
+                                  bits used per quality value)
+                                  3. -q ill_bin (Illumina 8-level binning)
+                                  4. -q binary thr high low (binary (2-level) 
+                                  thresholding, quality binned to high if >= 
+                                  thr and to low if < thr)
+  -l [ --long ]                   Use for compression of arbitrarily long read 
+                                  lengths. Can also provide better compression 
+                                  for reads with significant number of indels. 
+                                  -r disabled in this mode. For Illumina short 
+                                  reads, compression is better without -l flag.
+  -g [ --gzipped-fastq ]          enable if compression input is gzipped fastq 
+                                  or to output gzipped fastq during 
+                                  decompression
+  --gzip-level arg (=6)           gzip level (0-9) to use during decompression 
+                                  if -g flag is specified (default: 6)
+  --fasta-input                   enable if compression input is fasta file 
+                                  (i.e., no qualities)
+
+----------------------------------------
+Begin Batch Job Epilogue Thu May 23 06:14:23 EDT 2024
+Job ID:           1893784
+Username:         tus53997
+Group:            cis
+Job Name:         job_0_8_1
+Session:          2509
+Limits:           walltime=48:00:00,nodes=1:ppn=28,neednodes=1:ppn=28
+Resources:        cput=19:02:34,vmem=66686292kb,walltime=02:26:16,mem=66634012kb,energy_used=0
+Queue:            normal
+Account:          
+Deleting /dev/shm/*...
+----------------------------------------
+End Batch Job Epilogue Thu May 23 06:14:45 EDT 2024
+----------------------------------------
